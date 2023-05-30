@@ -17,13 +17,20 @@ function About() {
         </div>
 
         <p className={`text-xl mt-10`}>
-          Specializing in Front-end Development along with a passion for Graphic
-          Design. Experienced in ReactJS, VueJS with Quasar Framework and Axios,
-          as well as tools such as GIMP and Inkscape. In addition, I possess
-          strong teamwork and leadership skills that enable me to collaborate
-          effectively and guide projects towards success. With my technical
-          skills and creativity, I am excited to explore opportunities in Web
-          Development.
+          I have experience and expertise in Front-end Development, with a
+          strong inclination towards Graphic Design. My proficiency lies in
+          technologies like ReactJS, VueJS with Quasar Framework, and Axios.
+          Furthermore, I am well-versed in graphic design tools such as GIMP and
+          Inkscape.
+        </p>
+        <p className={`text-xl mt-10`}>
+          Beyond technical skills, I possess excellent teamwork and leadership
+          abilities, allowing me to effectively collaborate with others and lead
+          projects towards successful outcomes. I am enthusiastic about
+          exploring opportunities in the field of Web Development, where I can
+          combine my technical expertise with my creative mindset. I am
+          confident that my skills and passion will contribute to the success of
+          any project I am involved in.
         </p>
       </div>
     </div>
