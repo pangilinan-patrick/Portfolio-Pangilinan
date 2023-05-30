@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaBars, FaGithub, FaTimes } from "react-icons/fa";
+import ScrollLink from "./ScrollLink";
 
 function Navbar() {
   interface Link {
@@ -14,23 +15,23 @@ function Navbar() {
   const links: Link[] = [
     {
       id: 1,
-      link: "Home",
+      link: "home",
     },
     {
       id: 2,
-      link: "About",
+      link: "about",
     },
     {
       id: 3,
-      link: "Portfolio",
+      link: "portfolio",
     },
     {
       id: 4,
-      link: "Experience",
+      link: "experience",
     },
     {
       id: 5,
-      link: "Contact",
+      link: "contact",
     },
   ];
 
@@ -48,12 +49,14 @@ function Navbar() {
         {/* Looping over links array and using object destructuring to shorthand retrieving the properties */}
         {links.map(({ id, link }) => {
           return (
-            <li
-              key={id}
-              className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none`}
-            >
-              {link}
-            </li>
+            <ScrollLink className="btn" href={`#${link}`}>
+              <li
+                key={id}
+                className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none capitalize`}
+              >
+                {link}
+              </li>
+            </ScrollLink>
           );
         })}
       </ul>

@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <div
-      name="contact"
+      id="contact"
       className={`w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white`}
     >
       <div
@@ -38,8 +38,7 @@ function Contact() {
             />
             <textarea
               name="message"
-              id=""
-              rows="10"
+              rows={10}
               placeholder="Enter your message"
               className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none`}
             ></textarea>

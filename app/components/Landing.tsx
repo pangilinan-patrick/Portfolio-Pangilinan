@@ -6,7 +6,7 @@ import { FaAngleRight } from "react-icons/fa";
 function Landing() {
   return (
     <div
-      name="home"
+      id="home"
       className={`h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white`}
     >
       <div
