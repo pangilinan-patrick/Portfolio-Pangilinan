@@ -1,29 +1,22 @@
-import Link, { LinkProps } from "next/link";
-import React, { PropsWithChildren } from "react";
-// mirror the props of next/link component
-type AnchorProps = Omit<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  keyof LinkProps
->;
-type ScrollLinkProps = AnchorProps & LinkProps & PropsWithChildren;
-// component definition
-const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
+import React from "react";
+
+type ScrollLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+const ScrollLink = ({ href, children, ...props }: ScrollLinkProps) => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    //remove everything before the hash
-    const targetId = e.currentTarget.href.replace(/.*\#/, "");
+    const targetId = href?.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
-    window.scrollTo({
-      top: elem?.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
   return (
-    <Link {...props} onClick={handleScroll}>
+    <a href={href} onClick={handleScroll} {...props}>
       {children}
-    </Link>
+    </a>
   );
 };
-export default ScrollLink;
 
-// Code taken from reacthustle.com
+export default ScrollLink;

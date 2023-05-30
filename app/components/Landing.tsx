@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import HeroImage from "../assets/heroImage.png";
 import Image from "next/image";
 import { FaAngleRight } from "react-icons/fa";
+import ScrollLink from "./ScrollLink";
 
 function Landing() {
   return (
@@ -24,14 +26,16 @@ function Landing() {
           </p>
 
           <div>
-            <button
-              className={`group w-fit px-7 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500`}
-            >
-              Portfolio
-              <span className={`group-hover:rotate-90 duration-300 ml-1`}>
-                <FaAngleRight />
-              </span>
-            </button>
+            <ScrollLink className="btn" href="#portfolio">
+              <button
+                className={`group w-fit px-7 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500`}
+              >
+                Portfolio
+                <span className={`group-hover:rotate-90 duration-300 ml-1`}>
+                  <FaAngleRight />
+                </span>
+              </button>
+            </ScrollLink>
           </div>
         </div>
 
