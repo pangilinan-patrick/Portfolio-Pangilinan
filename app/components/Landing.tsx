@@ -16,13 +16,14 @@ function Landing() {
       >
         <div className={`flex flex-col justify-center h-full`}>
           <h2 className="text-4xl sm:text-7xl font-bold">
-            I'm a Front-End Developer
+            I&apos;m a Front-End Developer
           </h2>
           <p className={`text-gray-500 py-4`}>
-            Hi! I'm a diligent 4th Year Computer Science Student with skills in
-            programming, and specialization in Front-end Development. Committed
-            to continuous learning and professional growth, I consistently seek
-            out new opportunities to expand my skills and knowledge.
+            Hi! I&apos;m a diligent 4th Year Computer Science Student with
+            skills in programming, and specialization in Front-end Development.
+            Committed to continuous learning and professional growth, I
+            consistently seek out new opportunities to expand my skills and
+            knowledge.
           </p>
 
           <div>
