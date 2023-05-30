@@ -5,6 +5,7 @@ import SocialLinks from "./components/SocialLinks";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
+import Contact from "./components/Contact";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Portfolio />
       <Experience />
+      <Contact />
 
       <SocialLinks />
     </main>
