@@ -49,10 +49,9 @@ function Navbar() {
         {/* Looping over links array and using object destructuring to shorthand retrieving the properties */}
         {links.map(({ id, link }) => {
           return (
-            <ScrollLink className="btn" href={`#${link}`}>
+            <ScrollLink key={id} className="btn" href={`#${link}`}>
               <li
-                key={id}
-                className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none capitalize`}
+                className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none capitalize select-none`}
               >
                 {link}
               </li>
