@@ -63,10 +63,10 @@ function Portfolio() {
                   className={`rounded-md duration-200 hover:scale-105`}
                 />
                 <div className={`flex items-center justify-center`}>
-                  <button className={`w-1/2 py-5 duration-200 hover:scale-105`}>
+                  <button className={`px-14 py-5 duration-200 hover:scale-105`}>
                     <FaEye size={20} />
                   </button>
-                  <button className={`duration-200 hover:scale-105`}>
+                  <button className={`px-14 duration-200 hover:scale-105`}>
                     <FaCode size={20} />
                   </button>
                 </div>
