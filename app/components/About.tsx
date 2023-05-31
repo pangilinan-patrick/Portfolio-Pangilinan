@@ -10,7 +10,7 @@ function About() {
         className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full`}
       >
         {/* Header Title */}
-        <div className={`pb-8`}>
+        <div className={`py-8 sm:pb-8 sm:pt-0`}>
           <p className={`text-4xl font-bold inline border-b-4 border-gray-500`}>
             About Me
           </p>
