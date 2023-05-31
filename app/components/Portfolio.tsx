@@ -13,6 +13,7 @@ interface Portfolio {
   src: StaticImageData;
   demoLink: string;
   codeLink: string;
+  alt: string;
 }
 
 function Portfolio() {
@@ -22,18 +23,21 @@ function Portfolio() {
       src: myDbuddy,
       demoLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
       codeLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
+      alt: "mydbuddy banner",
     },
     {
       id: 2,
       src: calculator,
       demoLink: "https://pangilinan-patrick.github.io/calculator-react/",
       codeLink: "https://github.com/pangilinan-patrick/calculator-react",
+      alt: "calculator app built with reactjs",
     },
     {
       id: 3,
       src: todoList,
       demoLink: "https://todo-app-react-pangilinan-patrick.vercel.app/",
       codeLink: "https://github.com/pangilinan-patrick/todo-app-react",
+      alt: "todo list app built with reactjs",
     },
     {
       id: 4,
@@ -42,6 +46,7 @@ function Portfolio() {
         "https://pangilinan-patrick.github.io/physical-science-web-shs/Home.html",
       codeLink:
         "https://github.com/pangilinan-patrick/physical-science-web-shs",
+      alt: "physical science website",
     },
     {
       id: 5,
@@ -50,6 +55,7 @@ function Portfolio() {
         "https://github.com/pangilinan-patrick/user-management-system-vue",
       codeLink:
         "https://github.com/pangilinan-patrick/user-management-system-vue",
+      alt: "user management system in vuejs",
     },
     {
       id: 6,
@@ -57,6 +63,7 @@ function Portfolio() {
       demoLink:
         "https://pangilinan-patrick.github.io/innospire-website-shs/Home.html",
       codeLink: "https://github.com/pangilinan-patrick/innospire-website-shs",
+      alt: "innospire website",
     },
   ];
 
@@ -78,12 +85,12 @@ function Portfolio() {
         <div
           className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0`}
         >
-          {portfolio.map(({ id, src, demoLink, codeLink }) => {
+          {portfolio.map(({ id, src, demoLink, codeLink, alt }) => {
             return (
               <div key={id} className={`shadow-md shadow-gray-700`}>
                 <Image
                   src={src}
-                  alt="mydbuddy chatbot project"
+                  alt={alt}
                   className={`rounded-md duration-200 hover:scale-105`}
                 />
                 <div className={`flex items-center justify-center`}>

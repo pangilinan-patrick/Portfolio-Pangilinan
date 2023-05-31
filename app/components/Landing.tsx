@@ -43,7 +43,7 @@ function Landing() {
         <div>
           <Image
             src={HeroImage}
-            alt="my portrait"
+            alt="portrait of patrick"
             className={`rounded-2xl mx-auto w-2/3 md:w-full`}
           />
         </div>
