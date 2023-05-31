@@ -20,7 +20,7 @@ function Portfolio() {
     {
       id: 1,
       src: myDbuddy,
-      demoLink: "",
+      demoLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
       codeLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
     },
     {
@@ -32,8 +32,8 @@ function Portfolio() {
     {
       id: 3,
       src: todoList,
-      demoLink: "https://github.com/pangilinan-patrick/todo-app-react",
-      codeLink: "https://todo-app-react-pangilinan-patrick.vercel.app/",
+      demoLink: "https://todo-app-react-pangilinan-patrick.vercel.app/",
+      codeLink: "https://github.com/pangilinan-patrick/todo-app-react",
     },
     {
       id: 4,
@@ -46,7 +46,8 @@ function Portfolio() {
     {
       id: 5,
       src: userManagement,
-      demoLink: "",
+      demoLink:
+        "https://github.com/pangilinan-patrick/user-management-system-vue",
       codeLink:
         "https://github.com/pangilinan-patrick/user-management-system-vue",
     },
@@ -86,14 +87,14 @@ function Portfolio() {
                   className={`rounded-md duration-200 hover:scale-105`}
                 />
                 <div className={`flex items-center justify-center`}>
-                  <a href={demoLink}>
+                  <a href={demoLink} target="_blank" rel="noopener noreferrer">
                     <button
                       className={`px-14 py-5 duration-200 hover:scale-105`}
                     >
                       <FaEye size={20} />
                     </button>
                   </a>
-                  <a href={codeLink}>
+                  <a href={codeLink} target="_blank" rel="noopener noreferrer">
                     <button
                       className={`px-14 py-5 duration-200 hover:scale-105`}
                     >

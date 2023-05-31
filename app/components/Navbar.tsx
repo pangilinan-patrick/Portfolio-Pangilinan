@@ -40,9 +40,15 @@ function Navbar() {
       className={`flex justify-between items-center w-full h-20 text-white fixed bg-black px-4`}
     >
       <div>
-        <FaGithub
-          className={`text-3xl cursor-pointer font-medium  hover:scale-105 duration-200 list-none`}
-        />
+        <a
+          href="https://github.com/pangilinan-patrick"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub
+            className={`text-3xl cursor-pointer font-medium  hover:scale-105 duration-200 list-none`}
+          />
+        </a>
       </div>
 
       <ul className={`hidden md:flex`}>
