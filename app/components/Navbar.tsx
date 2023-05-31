@@ -69,7 +69,7 @@ function Navbar() {
       {/* Hamburger Menu */}
       <div
         onClick={() => setNav(!nav)}
-        className={`cursor-pointer pr-4 z-10 text-gray-500 md:hidden`}
+        className={`cursor-pointer z-10 text-gray-500 md:hidden`}
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
@@ -81,12 +81,14 @@ function Navbar() {
         >
           {links.map(({ id, link }) => {
             return (
-              <li
-                key={id}
-                className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none py-6 text-4xl`}
-              >
-                {link}
-              </li>
+              <ScrollLink key={id} className="btn" href={`#${link}`}>
+                <li
+                  onClick={() => setNav(!nav)}
+                  className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none py-6 text-4xl`}
+                >
+                  {link}
+                </li>
+              </ScrollLink>
             );
           })}
         </ul>
