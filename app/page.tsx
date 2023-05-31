@@ -20,6 +20,12 @@ export default function Home() {
       <Contact />
 
       <SocialLinks />
+      <div
+        id="footer"
+        className={`flex justify-center bg-gray-800 pb-1 mb-0 text-xs text-gray-600`}
+      >
+        Built with NextJS by Patrick Pangilinan
+      </div>
     </main>
   );
 }
