@@ -18,7 +18,7 @@ function Landing() {
           <h2 className="text-4xl sm:text-7xl font-bold">
             I&apos;m a Front-End Developer
           </h2>
-          <p className={`text-gray-500 py-4`}>
+          <p className={`text-gray-500 py-4 sm:mr-28`}>
             Hi! I&apos;m a diligent 4th Year Computer Science Student with
             skills in programming, and specialization in Front-end Development.
             Committed to continuous learning and professional growth, I
