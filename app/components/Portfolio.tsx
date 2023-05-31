@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import myDbuddy from "../assets/portfolio/mydbuddy.png";
 import innospireWeb from "../assets/portfolio/innospireweb.jpg";
 import calculator from "../assets/portfolio/calculator.jpg";
@@ -7,6 +8,7 @@ import todoList from "../assets/portfolio/todolist.jpg";
 import userManagement from "../assets/portfolio/usermanagement.jpg";
 import Image, { StaticImageData } from "next/image";
 import { FaCode, FaEye } from "react-icons/fa";
+import ProjectDetail from "./ProjectDetail";
 
 interface Portfolio {
   id: number;
@@ -17,6 +19,8 @@ interface Portfolio {
 }
 
 function Portfolio() {
+  const [showDetails, setShowDetails] = useState(false);
+
   const portfolio: Portfolio[] = [
     {
       id: 1,
@@ -91,7 +95,8 @@ function Portfolio() {
                 <Image
                   src={src}
                   alt={alt}
-                  className={`rounded-md duration-200 hover:scale-105`}
+                  onClick={() => setShowDetails(!showDetails)}
+                  className={`rounded-md duration-200 hover:scale-105 cursor-pointer`}
                 />
                 <div className={`flex items-center justify-center`}>
                   <a href={demoLink} target="_blank" rel="noopener noreferrer">
@@ -112,6 +117,9 @@ function Portfolio() {
               </div>
             );
           })}
+        </div>
+        <div className={`${showDetails ? "flex" : "hidden"}`}>
+          <ProjectDetail />
         </div>
       </div>
     </div>

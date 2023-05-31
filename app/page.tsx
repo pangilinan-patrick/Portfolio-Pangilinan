@@ -6,6 +6,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import ProjectDetail from "./components/ProjectDetail";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
