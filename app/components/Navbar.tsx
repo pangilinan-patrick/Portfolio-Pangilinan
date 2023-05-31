@@ -9,6 +9,7 @@ function Navbar() {
     link: string;
   }
 
+  // For toggling hamburger menu in mobile
   const [nav, setNav] = useState(false);
 
   // Navbar Links
@@ -75,24 +76,24 @@ function Navbar() {
       </div>
 
       {/* Mobile Links List */}
-      {nav && (
-        <ul
-          className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800`}
-        >
-          {links.map(({ id, link }) => {
-            return (
-              <ScrollLink key={id} className="btn" href={`#${link}`}>
-                <li
-                  onClick={() => setNav(!nav)}
-                  className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none py-6 text-4xl`}
-                >
-                  {link}
-                </li>
-              </ScrollLink>
-            );
-          })}
-        </ul>
-      )}
+      <ul
+        className={`${
+          nav ? "flex" : "hidden"
+        }  flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800`}
+      >
+        {links.map(({ id, link }) => {
+          return (
+            <ScrollLink key={id} className="btn" href={`#${link}`}>
+              <li
+                onClick={() => setNav(!nav)}
+                className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none py-6 text-4xl`}
+              >
+                {link}
+              </li>
+            </ScrollLink>
+          );
+        })}
+      </ul>
     </div>
   );
 }
