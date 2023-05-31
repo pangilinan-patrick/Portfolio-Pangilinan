@@ -119,7 +119,10 @@ function Portfolio() {
           })}
         </div>
         <div className={`${showDetails ? "flex" : "hidden"}`}>
-          <ProjectDetail />
+          <ProjectDetail
+            showDetails={showDetails}
+            setShowDetails={setShowDetails}
+          />
         </div>
       </div>
     </div>

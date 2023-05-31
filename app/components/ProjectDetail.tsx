@@ -7,16 +7,31 @@ import scienceWeb from "../assets/portfolio/scienceweb.jpg";
 import todoList from "../assets/portfolio/todolist.jpg";
 import { FaHtml5, FaLink, FaTimes } from "react-icons/fa";
 
-function ProjectDetail() {
+interface ProjectDetailProps {
+  showDetails: boolean;
+  setShowDetails: React.Dispatch<React.SetStateAction<boolean>>;
+}
+function ProjectDetail({ showDetails, setShowDetails }: ProjectDetailProps) {
+  // Prevent closing the modal upon clicking the modal itself
+  const handleModalClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+  };
+
   return (
     <div
-      className={`flex flex-col justify-center items-center absolute left-0 w-full h-screen bg-gray-900/75 text-white`}
+      className={`flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen bg-gray-900/75 text-white`}
+      onClick={() => setShowDetails(!showDetails)}
     >
       <div
         className={`flex flex-col justify-center items-center bg-gradient-to-b from-black to-gray-800 px-10 pb-8 mx-3 sm:mx-48 max-w-6xl rounded-md`}
+        onClick={handleModalClick}
       >
         <div className={`flex justify-end w-full py-6`}>
-          <FaTimes size={20} />
+          <FaTimes
+            size={20}
+            onClick={() => setShowDetails(!showDetails)}
+            className={`cursor-pointer`}
+          />
         </div>
 
         <div className={`max-w-4xl w-full`}>
