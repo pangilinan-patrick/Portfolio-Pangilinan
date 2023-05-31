@@ -202,9 +202,8 @@ function Portfolio() {
           <p className={`py-6`}>Check out some of my work!</p>
         </div>
 
-        <div
-          className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0`}
-        >
+        {/* Project cards */}
+        <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8  sm:px-0`}>
           {portfolio.map(
             ({
               id,
