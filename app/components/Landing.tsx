@@ -9,7 +9,7 @@ function Landing() {
   return (
     <div
       id="home"
-      className={`md:h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white`}
+      className={`md:h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white min-h-[40em]`}
     >
       {/* Space to not clip navbar */}
       <div className={`w-full h-20 md:hidden mb-10`}></div>

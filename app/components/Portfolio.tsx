@@ -176,7 +176,7 @@ function Portfolio() {
   return (
     <div
       id="portfolio"
-      className={`bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen `}
+      className={`bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen min-h-[50em]`}
     >
       {/* Animation Code modified from Fireship's Framer Motion code example */}
       <AnimatePresence
