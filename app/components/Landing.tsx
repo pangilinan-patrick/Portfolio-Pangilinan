@@ -13,6 +13,7 @@ function Landing() {
     >
       {/* Space to not clip navbar */}
       <div className={`w-full h-20 md:hidden mb-10`}></div>
+
       <div
         className={`max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row`}
       >

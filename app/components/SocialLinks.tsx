@@ -1,14 +1,15 @@
+// Social links to the left side
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaFile } from "react-icons/fa";
 
-function SocialLinks() {
-  interface Link {
-    id: number;
-    child: JSX.Element;
-    href: string;
-    style?: string;
-  }
+interface Link {
+  id: number;
+  child: JSX.Element;
+  href: string;
+  style?: string;
+}
 
+function SocialLinks() {
   const links: Link[] = [
     {
       id: 1,

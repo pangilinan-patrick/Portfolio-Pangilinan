@@ -1,3 +1,4 @@
+// Component for smooth scrolling when wrapped around a button
 import React from "react";
 
 type ScrollLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;

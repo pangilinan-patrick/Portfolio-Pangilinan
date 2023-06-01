@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { FaBars, FaGithub, FaTimes } from "react-icons/fa";
 import ScrollLink from "./ScrollLink";
 
-function Navbar() {
-  interface Link {
-    id: number;
-    link: string;
-  }
+interface Link {
+  id: number;
+  link: string;
+}
 
+function Navbar() {
   // For toggling hamburger menu in mobile
   const [nav, setNav] = useState(false);
 

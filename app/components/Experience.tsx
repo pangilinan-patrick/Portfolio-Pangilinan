@@ -11,15 +11,15 @@ import {
 } from "react-icons/fa";
 import { SiNextdotjs, SiQuasar } from "react-icons/si";
 
-function Experience() {
-  interface Tech {
-    id: number;
-    icon: IconType;
-    title: string;
-    color: string;
-    style: string;
-  }
+interface Tech {
+  id: number;
+  icon: IconType;
+  title: string;
+  color: string;
+  style: string;
+}
 
+function Experience() {
   const tech: Tech[] = [
     {
       id: 1,
@@ -104,6 +104,8 @@ function Experience() {
             These are some of the technologies I&apos;ve worked with.
           </p>
         </div>
+
+        {/* Tech Icons Cards  */}
         <div
           className={`w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0`}
         >

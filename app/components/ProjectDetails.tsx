@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import { FaHtml5, FaLink, FaTimes } from "react-icons/fa";
+import { FaLink, FaTimes } from "react-icons/fa";
 import Backdrop from "./Backdrop";
 import { IconType } from "react-icons";
 
