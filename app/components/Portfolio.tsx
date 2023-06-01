@@ -57,12 +57,13 @@ function Portfolio() {
       alt: "mydbuddy banner",
       description: (
         <span>
-          As the UI/UX designer for our thesis project, I led the design efforts
-          for a chatbot powered by both NLP and rule-based systems, which was
-          aimed at enhancing our school&apos;s portal. I played a pivotal role
-          in ensuring that the chatbot was user-friendly and provided a seamless
-          experience for our target audience. You can find more detailed
-          information about my contribution to the project in our repository.
+          As the Front-End and UI/UX Developer for our thesis project, I led the
+          development efforts in the front-facing side of the chatbot powered by
+          both NLP and rule-based systems, which was aimed at enhancing our
+          school&apos;s portal. I played a pivotal role in ensuring that the
+          chatbot was user-friendly and provided a seamless experience for our
+          target audience. You can find more detailed information about my
+          contribution to the project in our repository.
         </span>
       ),
       techIcon: [FaHtml5, FaCss3, FaJs],
@@ -80,7 +81,8 @@ function Portfolio() {
           The ReactJS Calculator is a side project I developed to enhance my
           proficiency in ReactJS and SCSS. The goal of this project was to gain
           hands-on experience with ReactJS components, state management, and
-          styling using SCSS.
+          styling using SCSS. This project is still currently a work in progress
+          and may contain bugs.
         </span>
       ),
       techIcon: [FaReact, FaSass],
@@ -95,7 +97,7 @@ function Portfolio() {
       alt: "todo list app built with reactjs",
       description: (
         <span>
-          The Next.js Todo List App with Tailwind CSS is an exciting side
+          This Next.js Todo List App with Tailwind CSS is an exciting side
           project that I embarked on to gain hands-on experience with Next.js, a
           powerful React framework, and Tailwind CSS, a highly customizable CSS
           framework. The primary goal of this project was to familiarize myself
@@ -124,8 +126,8 @@ function Portfolio() {
           capabilities of Bootstrap, a popular front-end framework.
         </span>
       ),
-      techIcon: [FaHtml5, FaCss3, FaJs, FaBootstrap],
-      techName: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      techIcon: [FaHtml5, FaCss3, FaBootstrap],
+      techName: ["HTML5", "CSS3", "Bootstrap"],
     },
     {
       id: 5,
@@ -140,10 +142,10 @@ function Portfolio() {
         <span>
           The User Management System project is a web application developed
           using Vue.js, Quasar Framework, and Axios. Its primary purpose is to
-          provide a robust and efficient solution for managing user accounts and
-          permissions within an organization or system. I developed this project
-          as part of one of the onboarding exercises at my OJT and it helped me
-          get acquainted with the aformentioned web development technologies.
+          provide a robust and efficient solution for managing user accounts. I
+          developed this project as part of one of the onboarding exercises at
+          my OJT and it helped me get acquainted with the aformentioned web
+          development technologies as well as using Rest APIs.
         </span>
       ),
       techIcon: [FaVuejs, SiQuasar, SiAxios],
@@ -160,14 +162,14 @@ function Portfolio() {
       description: (
         <span>
           During my 2-week student internship as part of my Work Immersion
-          subject, I had the opportunity to contribute to the development of a
-          draft website for Innospire IT Solutions. Innospire IT Solutions is a
-          reputable IT company that specializes in providing innovative
-          technological solutions to businesses.
+          subject in Senior High School, I had the opportunity to contribute to
+          the development of a draft website for Innospire IT Solutions.
+          Innospire IT Solutions is a reputable IT company that specializes in
+          providing innovative technological solutions to businesses.
         </span>
       ),
-      techIcon: [FaHtml5, FaCss3, FaJs],
-      techName: ["HTML5", "CSS3", "JavaScript"],
+      techIcon: [FaHtml5, FaCss3],
+      techName: ["HTML5", "CSS3"],
     },
   ];
 
