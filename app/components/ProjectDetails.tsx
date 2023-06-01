@@ -91,7 +91,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
           <ul className={`flex gap-7`}>
             {project.techIcon.map((Icon, index) => (
               <li
-                key="index"
+                key={index}
                 className={`flex flex-col justify-center items-center `}
               >
                 <Icon size={35} />
