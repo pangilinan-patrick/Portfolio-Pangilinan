@@ -14,7 +14,8 @@ function Contact() {
             Contact
           </p>
           <p className={`py-6`}>
-            Submit the form below to get in touch with me
+            Submit the form below to get in touch with me. This will send a
+            response to me via getform.io.
           </p>
         </div>
 

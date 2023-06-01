@@ -103,7 +103,7 @@ function Experience() {
             Experience
           </p>
           <p className={`py-6`}>
-            These are some of the technologies I&apos;ve worked with
+            These are some of the technologies I&apos;ve worked with.
           </p>
         </div>
         <div
