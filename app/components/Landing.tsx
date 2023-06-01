@@ -19,11 +19,11 @@ function Landing() {
             I&apos;m a Front-End Developer
           </h2>
           <p className={`text-gray-500 py-4 sm:mr-28`}>
-            Hi, I'm Patrick Pangilinan! I&apos;m a diligent 4th Year Computer
-            Science Student with skills in programming, and specialization in
-            Front-end Development. Committed to continuous learning and
-            professional growth, I consistently seek out new opportunities to
-            expand my skills and knowledge.
+            Hi, I&apos;m Patrick Pangilinan! I&apos;m a diligent 4th Year
+            Computer Science Student with skills in programming, and
+            specialization in Front-end Development. Committed to continuous
+            learning and professional growth, I consistently seek out new
+            opportunities to expand my skills and knowledge.
           </p>
 
           <div>

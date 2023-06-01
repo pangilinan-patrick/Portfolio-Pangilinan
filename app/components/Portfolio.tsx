@@ -176,7 +176,7 @@ function Portfolio() {
   return (
     <div
       id="portfolio"
-      className={`bg-gradient-to-b from-black to-gray-800 w-full text-white sm:h-screen`}
+      className={`bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen `}
     >
       {/* Animation Code modified from Fireship's Framer Motion code example */}
       <AnimatePresence
@@ -201,16 +201,16 @@ function Portfolio() {
           <p className={`text-4xl font-bold inline border-b-4 border-gray-500`}>
             Portfolio
           </p>
-          <p className={`py-6 mr-64`}>
+          <p className={`py-6 md:mr-64`}>
             Check out some of my work! The eye icon will show a demo of my work
-            if it's deployed and the code icon will show the repository of the
-            project. You can also click on the images for a description of the
-            project.
+            if it&apos;s deployed and the code icon will show the repository of
+            the project. You can also click on the images for a description of
+            the project.
           </p>
         </div>
 
         {/* Project cards */}
-        <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8  sm:px-0`}>
+        <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0`}>
           {portfolio.map(
             ({
               id,
