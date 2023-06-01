@@ -9,8 +9,10 @@ function Landing() {
   return (
     <div
       id="home"
-      className={`h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white`}
+      className={`md:h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white`}
     >
+      {/* Space to not clip navbar */}
+      <div className={`w-full h-20 md:hidden mb-10`}></div>
       <div
         className={`max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row`}
       >
@@ -44,7 +46,7 @@ function Landing() {
           <Image
             src={HeroImage}
             alt="portrait of patrick"
-            className={`rounded-2xl mx-auto w-2/3 md:w-full`}
+            className={`rounded-2xl mx-auto w-2/4 md:w-full my-20`}
           />
         </div>
       </div>
