@@ -50,6 +50,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
         animate="visible"
         exit="exit"
       >
+        {/* Close button */}
         <div
           className={`flex flex-col justify-center items-center bg-gradient-to-b from-black to-gray-800 px-10 pb-8 mx-3 sm:mx-48 max-w-6xl rounded-md`}
           onClick={(e) => e.stopPropagation()}
@@ -66,6 +67,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
             <Image src={project.src} alt="placeholder" />
           </div>
 
+          {/* Title and Descriptions */}
           <div className={`mt-5 sm:mx-20`}>
             <a
               href={project.codeLink}
@@ -85,11 +87,12 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
             <p className={`py-6`}>{project.description}</p>
           </div>
 
-          <ul className={`flex`}>
+          {/* Tech Icons and Names */}
+          <ul className={`flex gap-7`}>
             {project.techIcon.map((Icon, index) => (
               <li
                 key="index"
-                className={`flex flex-col justify-center items-center mr-3`}
+                className={`flex flex-col justify-center items-center `}
               >
                 <Icon size={35} />
                 <p className={`text-xs mt-1`}>{project.techName[index]}</p>
