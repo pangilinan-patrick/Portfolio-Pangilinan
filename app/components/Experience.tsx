@@ -11,6 +11,7 @@ import {
   FaSass,
   FaVuejs,
 } from "react-icons/fa";
+import { SiNextdotjs, SiQuasar } from "react-icons/si";
 
 function Experience() {
   interface Tech {
@@ -73,17 +74,17 @@ function Experience() {
     },
     {
       id: 8,
-      icon: FaGit,
-      title: "Git",
-      color: "text-amber-700",
-      style: "shadow-amber-700",
+      icon: SiNextdotjs,
+      title: "NextJS",
+      color: "text-slate-500",
+      style: "shadow-slate-500",
     },
     {
       id: 9,
-      icon: FaLinux,
-      title: "Linux",
-      color: "text-slate-400",
-      style: "shadow-slate-400",
+      icon: SiQuasar,
+      title: "Quasar",
+      color: "text-sky-500",
+      style: "shadow-sky-500",
     },
   ];
 
