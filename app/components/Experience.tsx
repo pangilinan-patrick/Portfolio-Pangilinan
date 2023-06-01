@@ -3,10 +3,8 @@ import { IconType } from "react-icons";
 import {
   FaBootstrap,
   FaCss3,
-  FaGit,
   FaHtml5,
   FaJs,
-  FaLinux,
   FaReact,
   FaSass,
   FaVuejs,
