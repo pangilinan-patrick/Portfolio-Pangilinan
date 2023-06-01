@@ -1,4 +1,3 @@
-import { Raleway } from "next/font/google";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
 import SocialLinks from "./components/SocialLinks";
@@ -7,11 +6,9 @@ import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 
-const raleway = Raleway({ subsets: ["latin"] });
-
 export default function Home() {
   return (
-    <main className={raleway.className}>
+    <main>
       <Navbar />
       <Landing />
       <About />
