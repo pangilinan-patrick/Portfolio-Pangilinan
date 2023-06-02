@@ -4,6 +4,8 @@ import React from "react";
 import { FaLink, FaTimes } from "react-icons/fa";
 import Backdrop from "./Backdrop";
 import { IconType } from "react-icons";
+import { Example } from "./carousel/Example";
+import BlankSpace from "../assets/portfolio/blankspace.png";
 
 const dropIn = {
   hidden: {
@@ -32,6 +34,7 @@ interface ProjectDetailsProps {
     id: number;
     title: string;
     src: StaticImageData;
+    folder: string[];
     demoLink: string;
     codeLink: string;
     alt: string;
@@ -64,11 +67,16 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
           </div>
 
           <div className={`max-w-4xl w-full`}>
-            <Image src={project.src} alt="placeholder" />
+            <div className="w-full h-max relative flex justify-center items-center">
+              <Example folder={project.folder} />
+              {/* Added space for the images because I don't know why the height stretches on divs
+              Not the best practice, but I'll get back to this some other time */}
+              <Image src={BlankSpace} alt="blank" />
+            </div>
           </div>
 
           {/* Title and Descriptions */}
-          <div className={`mt-5 sm:mx-20`}>
+          <div className={`mt-5 xl:mx-20`}>
             <a
               href={project.codeLink}
               target="_blank"

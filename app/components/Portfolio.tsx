@@ -27,6 +27,7 @@ interface Portfolio {
   id: number;
   title: string;
   src: StaticImageData;
+  folder: string[];
   demoLink: string;
   codeLink: string;
   alt: string;
@@ -52,6 +53,7 @@ function Portfolio() {
       id: 1,
       title: "MyDBuddy Chatbot",
       src: myDbuddy,
+      folder: ["/mydbuddy/mydbuddy.png"],
       demoLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
       codeLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
       alt: "mydbuddy banner",
@@ -73,6 +75,7 @@ function Portfolio() {
       id: 2,
       title: "Calculator React App",
       src: calculator,
+      folder: ["/calculator/calculator.jpg"],
       demoLink: "https://pangilinan-patrick.github.io/calculator-react/",
       codeLink: "https://github.com/pangilinan-patrick/calculator-react",
       alt: "calculator app built with reactjs",
@@ -92,6 +95,7 @@ function Portfolio() {
       id: 3,
       title: "Todo List React App",
       src: todoList,
+      folder: ["/todo-list/todolist.jpg"],
       demoLink: "https://todo-app-react-pangilinan-patrick.vercel.app/",
       codeLink: "https://github.com/pangilinan-patrick/todo-app-react",
       alt: "todo list app built with reactjs",
@@ -112,6 +116,7 @@ function Portfolio() {
       id: 4,
       title: "Physical Science Website",
       src: scienceWeb,
+      folder: ["/physical-science/scienceweb.jpg"],
       demoLink:
         "https://pangilinan-patrick.github.io/physical-science-web-shs/Home.html",
       codeLink:
@@ -133,6 +138,7 @@ function Portfolio() {
       id: 5,
       title: "User Management System",
       src: userManagement,
+      folder: ["/user-management/usermanagement.jpg"],
       demoLink:
         "https://github.com/pangilinan-patrick/user-management-system-vue",
       codeLink:
@@ -154,6 +160,7 @@ function Portfolio() {
     {
       id: 6,
       src: innospireWeb,
+      folder: ["/innospire/innospireweb.jpg"],
       title: "Innospire IT Solutions Website",
       demoLink:
         "https://pangilinan-patrick.github.io/innospire-website-shs/Home.html",
@@ -216,6 +223,7 @@ function Portfolio() {
               id,
               title,
               src,
+              folder,
               demoLink,
               codeLink,
               alt,
@@ -235,6 +243,7 @@ function Portfolio() {
                             id,
                             title,
                             src,
+                            folder,
                             demoLink,
                             codeLink,
                             alt,
