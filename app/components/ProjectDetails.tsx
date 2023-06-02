@@ -50,11 +50,11 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
         animate="visible"
         exit="exit"
       >
-        {/* Close button */}
         <div
-          className={`flex flex-col justify-center items-center bg-gradient-to-b from-black to-gray-800 px-10 pb-8 mx-3 sm:mx-48 max-w-6xl rounded-md`}
+          className={`flex flex-col justify-center items-center bg-gradient-to-b from-black to-gray-800 px-10 pb-8 mx-4 lg:mx-48 max-w-6xl rounded-md project-detail-modal`}
           onClick={(e) => e.stopPropagation()}
         >
+          {/* Close button */}
           <div className={`flex justify-end w-full py-6`}>
             <FaTimes
               size={20}

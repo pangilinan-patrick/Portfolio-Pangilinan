@@ -36,3 +36,43 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #999;
 }
+
+@media (max-height: 840px) {
+  .project-detail-modal {
+    --tw-scale-x: 0.8;
+    --tw-scale-y: 0.8;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewx(var(--tw-skew-x)) skewy(var(--tw-skew-y))
+      scalex(var(--tw-scale-x)) scaley(var(--tw-scale-y));
+  }
+}
+
+@media (max-height: 660px) {
+  .project-detail-modal {
+    --tw-scale-x: 0.6;
+    --tw-scale-y: 0.6;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+@media (max-height: 450px) {
+  .project-detail-modal {
+    --tw-scale-x: 0.4;
+    --tw-scale-y: 0.4;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+@media (max-height: 350px) {
+  .project-detail-modal {
+    --tw-scale-x: 0.2;
+    --tw-scale-y: 0.2;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
