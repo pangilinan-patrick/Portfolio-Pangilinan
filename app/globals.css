@@ -37,6 +37,7 @@
   background: #999;
 }
 
+/* For Project Detail Modal */
 @media (max-height: 840px) {
   .project-detail-modal {
     --tw-scale-x: 0.8;
@@ -74,5 +75,12 @@
     transform: translate(var(--tw-translate-x), var(--tw-translate-y))
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+/* For tech icon */
+@media (max-width: 320px) {
+  .tech-icon {
+    width: 3em;
   }
 }
