@@ -2,6 +2,22 @@
 import React, { useState } from "react";
 import { FaBars, FaGithub, FaTimes } from "react-icons/fa";
 import ScrollLink from "./ScrollLink";
+import { AnimatePresence, motion } from "framer-motion";
+
+const dropIn = {
+  hidden: {
+    y: "-100vh",
+    opacity: 0,
+  },
+  visible: {
+    y: "0",
+    opacity: 1,
+  },
+  exit: {
+    y: "100vh",
+    opacity: 0,
+  },
+};
 
 interface Link {
   id: number;
@@ -40,6 +56,32 @@ function Navbar() {
     <div
       className={`flex justify-between items-center w-full h-20 text-white fixed bg-black px-4`}
     >
+      <AnimatePresence initial={false} onExitComplete={() => null}>
+        {/* Mobile Links List */}
+        {nav && (
+          <motion.ul
+            className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800`}
+            variants={dropIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            {links.map(({ id, link }) => {
+              return (
+                <ScrollLink key={id} className="btn" href={`#${link}`}>
+                  <li
+                    onClick={() => setNav(!nav)}
+                    className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none py-6 text-4xl`}
+                  >
+                    {link}
+                  </li>
+                </ScrollLink>
+              );
+            })}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+
       <div>
         <a
           href="https://github.com/pangilinan-patrick"
@@ -74,26 +116,6 @@ function Navbar() {
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
-
-      {/* Mobile Links List */}
-      <ul
-        className={`${
-          nav ? "flex" : "hidden"
-        }  flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800`}
-      >
-        {links.map(({ id, link }) => {
-          return (
-            <ScrollLink key={id} className="btn" href={`#${link}`}>
-              <li
-                onClick={() => setNav(!nav)}
-                className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none py-6 text-4xl`}
-              >
-                {link}
-              </li>
-            </ScrollLink>
-          );
-        })}
-      </ul>
     </div>
   );
 }
