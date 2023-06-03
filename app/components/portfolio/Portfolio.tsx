@@ -53,7 +53,11 @@ function Portfolio() {
       id: 1,
       title: "MyDBuddy Chatbot",
       src: myDbuddy,
-      folder: ["/mydbuddy/mydbuddy.png"],
+      folder: [
+        "/mydbuddy/mydbuddy.png",
+        "/mydbuddy/open-chatbot.gif",
+        "/mydbuddy/rule-based.gif",
+      ],
       demoLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
       codeLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
       alt: "mydbuddy banner",
