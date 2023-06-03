@@ -71,7 +71,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
               <Example folder={project.folder} />
               {/* Added space for the images because I don't know why the height stretches on divs
               Not the best practice, but I'll get back to this some other time */}
-              <Image src={BlankSpace} alt="blank" />
+              <Image src={BlankSpace} alt="" />
             </div>
           </div>
 
@@ -84,7 +84,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
             >
               <div className={`flex`}>
                 <p
-                  className={`text-3xl font-bold inline border-b-4 border-gray-500 hover:text-4xl duration-200`}
+                  className={`text-3xl font-bold inline border-b-4 border-gray-500 hover:text-[2rem] duration-200`}
                 >
                   {project.title}
                 </p>
