@@ -143,8 +143,7 @@ function Portfolio() {
       title: "User Management System",
       src: userManagement,
       folder: ["/user-management/usermanagement.jpg"],
-      demoLink:
-        "https://github.com/pangilinan-patrick/user-management-system-vue",
+      demoLink: "https://user-management-system-vue.vercel.app/#/list-of-users",
       codeLink:
         "https://github.com/pangilinan-patrick/user-management-system-vue",
       alt: "user management system in vuejs",
