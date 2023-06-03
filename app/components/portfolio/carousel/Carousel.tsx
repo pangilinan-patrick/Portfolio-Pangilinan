@@ -2,13 +2,13 @@ import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
-import "app/components/carousel/styles.css";
+import "app/components/portfolio/carousel/styles.css";
 
 interface CarouselProps {
   folder: string[];
 }
 
-export const Example = ({ folder }: CarouselProps) => {
+export const Carousel = ({ folder }: CarouselProps) => {
   const variants = {
     enter: (direction: number) => {
       return {

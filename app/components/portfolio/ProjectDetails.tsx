@@ -4,8 +4,8 @@ import React from "react";
 import { FaLink, FaTimes } from "react-icons/fa";
 import Backdrop from "./Backdrop";
 import { IconType } from "react-icons";
-import { Example } from "./carousel/Example";
-import BlankSpace from "../assets/portfolio/blankspace.png";
+import { Carousel } from "./carousel/Carousel";
+import BlankSpace from "app/assets/blankspace.png";
 
 const dropIn = {
   hidden: {
@@ -68,7 +68,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
 
           <div className={`max-w-4xl w-full`}>
             <div className="w-full h-max relative flex justify-center items-center">
-              <Example folder={project.folder} />
+              <Carousel folder={project.folder} />
               {/* Added space for the images because I don't know why the height stretches on divs
               Not the best practice, but I'll get back to this some other time */}
               <Image src={BlankSpace} alt="" />

@@ -1,10 +1,10 @@
-import Landing from "./components/Landing";
-import Navbar from "./components/Navbar";
+import Landing from "./components/landing/Landing";
+import Navbar from "./components/navbar/Navbar";
 import SocialLinks from "./components/SocialLinks";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Experience from "./components/Experience";
-import Contact from "./components/Contact";
+import About from "./components/about/About";
+import Portfolio from "./components/portfolio/Portfolio";
+import Experience from "./components/experience/Experience";
+import Contact from "./components/contact/Contact";
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaBars, FaGithub, FaTimes } from "react-icons/fa";
-import ScrollLink from "./ScrollLink";
+import ScrollLink from "../ScrollLink";
 import { AnimatePresence, motion } from "framer-motion";
 
 const dropIn = {
