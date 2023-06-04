@@ -46,10 +46,7 @@ export const Carousel = ({ folder }: CarouselProps) => {
   };
 
   const handleImageLoad = () => {
-    setTimeout(() => {
-      setLoading(false);
-      setImageLoadError(true);
-    }, 2000);
+    setLoading(false);
   };
 
   const handleImageError = () => {
