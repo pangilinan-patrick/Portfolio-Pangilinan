@@ -9,6 +9,9 @@ interface CarouselProps {
 }
 
 export const Carousel = ({ folder }: CarouselProps) => {
+  const [isLoading, setLoading] = useState(true);
+  const [imageLoadError, setImageLoadError] = useState(false);
+
   const variants = {
     enter: (direction: number) => {
       return {
@@ -30,33 +33,55 @@ export const Carousel = ({ folder }: CarouselProps) => {
     },
   };
 
-  /**
-   * Experimenting with distilling swipe offset and velocity into a single variable, so the
-   * less distance a user has swiped, the more velocity they need to register as a swipe.
-   * Should accomodate longer swipes and short flicks without having binary checks on
-   * just distance thresholds and velocity > 0.
-   */
+  const [[page, direction], setPage] = useState([0, 0]);
+  const imageIndex = wrap(0, folder.length, page);
+
   const swipeConfidenceThreshold = 10000;
   const swipePower = (offset: number, velocity: number) => {
     return Math.abs(offset) * velocity;
   };
-  const [[page, direction], setPage] = useState([0, 0]);
-
-  // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
-  // then wrap that within 0-2 to find our image ID in the array below. By passing an
-  // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
-  // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
-  const imageIndex = wrap(0, folder.length, page);
 
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
   };
 
+  const handleImageLoad = () => {
+    setTimeout(() => {
+      setLoading(false);
+      setImageLoadError(true);
+    }, 2000);
+  };
+
+  const handleImageError = () => {
+    setImageLoadError(true);
+    setLoading(false);
+  };
+
   return (
     <>
+      {/* while image is loading */}
+      <div
+        className={`animate-pulse absolute w-full justify-center items-center ${
+          isLoading ? "flex" : "hidden"
+        }`}
+      >
+        <div className="relative w-full">
+          <div className={`bg-slate-200 w-full pt-[50%]`}></div>
+        </div>
+      </div>
+      {imageLoadError && (
+        <div
+          className={`absolute w-screen justify-center items-center ${
+            imageLoadError ? "flex" : "hidden"
+          }`}
+        >
+          {"Error loading image :("}
+        </div>
+      )}
+
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
-          className={`absolute w-[100vw]`}
+          className={`absolute w-[100vw] ${isLoading ? "hidden" : ""}`}
           key={page}
           src={folder[imageIndex]}
           custom={direction}
@@ -80,6 +105,8 @@ export const Carousel = ({ folder }: CarouselProps) => {
               paginate(-1);
             }
           }}
+          onLoad={handleImageLoad}
+          onError={handleImageError}
         />
       </AnimatePresence>
       <div className="next text-black" onClick={() => paginate(1)}>
