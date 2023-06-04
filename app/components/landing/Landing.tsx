@@ -47,6 +47,7 @@ function Landing() {
           <Image
             src={HeroImage}
             alt="portrait of patrick"
+            priority={true}
             className={`rounded-2xl mx-auto w-2/4 md:w-full my-20`}
           />
         </div>
