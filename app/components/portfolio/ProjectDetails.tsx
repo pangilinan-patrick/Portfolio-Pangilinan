@@ -54,7 +54,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
         exit="exit"
       >
         <div
-          className={`flex flex-col justify-center items-center bg-gradient-to-b from-black to-gray-800 px-10 pb-8 mx-4 lg:mx-48 max-w-6xl rounded-md project-detail-modal`}
+          className={`flex flex-col justify-center items-center bg-gradient-to-b from-black to-gray-800 px-10 pb-8 mx-4 max-w-6xl rounded-md project-detail-modal`}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
@@ -67,7 +67,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
           </div>
 
           <div className={`max-w-4xl w-full`}>
-            <div className="w-full h-max relative flex justify-center items-center">
+            <div className={`relative flex justify-center items-center`}>
               <Carousel folder={project.folder} />
               {/* Added space for the images because I don't know why the height stretches on divs
               Not the best practice, but I'll get back to this some other time */}
@@ -92,7 +92,10 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
                 <FaLink className={`text-md ml-2`} />
               </div>
             </a>
-            <p className={`py-6`}>{project.description}</p>
+            <p className={`my-6 h-44 md:h-auto overflow-y-auto`}>
+              {/* <p className={`py-6`}> */}
+              {project.description}
+            </p>
           </div>
 
           {/* Tech Icons and Names */}

@@ -38,43 +38,42 @@
 }
 
 /* For Project Detail Modal */
-@media (max-height: 840px) {
+@media (max-height: 800px) {
   .project-detail-modal {
-    --tw-scale-x: 0.8;
-    --tw-scale-y: 0.8;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewx(var(--tw-skew-x)) skewy(var(--tw-skew-y))
-      scalex(var(--tw-scale-x)) scaley(var(--tw-scale-y));
+    height: 100vh;
+    width: 100vw;
+    padding-top: 1rem;
+    overflow-y: auto;
   }
 }
 
-@media (max-height: 660px) {
+@media (max-height: 760px) {
   .project-detail-modal {
-    --tw-scale-x: 0.6;
-    --tw-scale-y: 0.6;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    padding-top: 5rem;
   }
 }
 
-@media (max-height: 450px) {
+@media (max-height: 680px) {
   .project-detail-modal {
-    --tw-scale-x: 0.4;
-    --tw-scale-y: 0.4;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    padding-top: 10rem;
   }
 }
 
-@media (max-height: 350px) {
+@media (max-height: 605px) {
   .project-detail-modal {
-    --tw-scale-x: 0.2;
-    --tw-scale-y: 0.2;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    padding-top: 15rem;
+  }
+}
+
+@media (min-width: 667px) and (max-height: 525px) {
+  .project-detail-modal {
+    padding-top: 20rem;
+  }
+}
+
+@media (min-width: 667px) and (max-height: 440px) {
+  .project-detail-modal {
+    padding-top: 25rem;
   }
 }
 
