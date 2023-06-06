@@ -59,7 +59,7 @@ function SocialLinks() {
           return (
             <li
               key={id}
-              className={`flex justify-between items-center pl-3 w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-900 ${style}`}
+              className={`flex justify-between items-center pl-4 w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-900 ${style}`}
             >
               <a
                 href={href}
