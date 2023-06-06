@@ -44,6 +44,7 @@
     width: 100vw;
     padding-top: 1rem;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
