@@ -42,10 +42,15 @@ function Portfolio() {
     null
   );
 
-  const close = () => setModalOpen(false);
+  const close = () => {
+    setModalOpen(false);
+    document.body.classList.remove("overflow-hidden");
+  };
+
   const open = (project: Portfolio) => {
     setSelectedProject(project);
     setModalOpen(true);
+    document.body.classList.add("overflow-hidden");
   };
 
   const portfolio: Portfolio[] = [
