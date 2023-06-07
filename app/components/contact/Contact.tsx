@@ -1,6 +1,38 @@
-import React from "react";
+"use client";
+import React, { FormEvent, useState } from "react";
 
 function Contact() {
+  const [isNameValid, setIsNameValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState(true);
+
+  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // Reset validation status
+    setIsNameValid(true);
+    setIsEmailValid(true);
+
+    // Get form data
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name"));
+    const email = String(formData.get("email"));
+
+    // Validate name
+    if (name?.trim() === "") {
+      setIsNameValid(false);
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email as string)) {
+      setIsEmailValid(false);
+    }
+
+    // If both name and email are valid, submit the form
+    if (isNameValid && isEmailValid) {
+      event.currentTarget.submit();
+    }
+  };
   return (
     <div
       id="contact"
@@ -21,6 +53,7 @@ function Contact() {
 
         <div className={`flex justify-center items-center`}>
           <form
+            onSubmit={handleFormSubmit}
             action="https://getform.io/f/363e128f-06ee-4548-a9f8-3d43eb13b288"
             method="POST"
             className={`flex flex-col w-full md:w-1/2`}
@@ -30,7 +63,9 @@ function Contact() {
               type="text"
               name="name"
               placeholder="Enter your name"
-              className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4`}
+              className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4 ${
+                !isNameValid ? "border-red-500" : ""
+              }`}
               maxLength={50}
               required
             />
@@ -39,7 +74,9 @@ function Contact() {
               type="email"
               name="email"
               placeholder="Enter your email"
-              className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4`}
+              className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4 ${
+                !isEmailValid ? "border-red-500" : ""
+              }`}
               maxLength={50}
               required
             />
