@@ -5,7 +5,6 @@ import { FaLink, FaTimes } from "react-icons/fa";
 import Backdrop from "./Backdrop";
 import { IconType } from "react-icons";
 import { Carousel } from "./carousel/Carousel";
-import BlankSpace from "app/assets/blankspace.png";
 
 const dropIn = {
   hidden: {
@@ -69,9 +68,8 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
           <div className={`max-w-4xl w-full`}>
             <div className={`relative flex justify-center items-center`}>
               <Carousel folder={project.folder} />
-              {/* Added space for the images because I don't know why the height stretches on divs
-              Not the best practice, but I'll get back to this some other time */}
-              <Image src={BlankSpace} alt="" />
+              {/* Space behind the image */}
+              <div className="aspect-w-2 aspect-h-1 bg-red-500"></div>
             </div>
           </div>
 

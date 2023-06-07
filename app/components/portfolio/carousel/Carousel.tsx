@@ -68,7 +68,7 @@ export const Carousel = ({ folder }: CarouselProps) => {
       </div>
       {imageLoadError && (
         <div
-          className={`absolute w-screen justify-center items-center ${
+          className={`absolute w-full justify-center items-center ${
             imageLoadError ? "flex" : "hidden"
           }`}
         >
