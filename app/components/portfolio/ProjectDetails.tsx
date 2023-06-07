@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import React from "react";
 import { FaLink, FaTimes } from "react-icons/fa";
 import Backdrop from "./Backdrop";
@@ -32,11 +32,9 @@ interface ProjectDetailsProps {
   project: {
     id: number;
     title: string;
-    src: StaticImageData;
     folder: string[];
     demoLink: string;
     codeLink: string;
-    alt: string;
     description: React.ReactNode;
     techIcon: IconType[];
     techName: string[];
@@ -69,7 +67,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
             <div className={`relative flex justify-center items-center`}>
               <Carousel folder={project.folder} />
               {/* Space behind the image */}
-              <div className="aspect-w-2 aspect-h-1 bg-red-500"></div>
+              <div className="aspect-w-2 aspect-h-1"></div>
             </div>
           </div>
 
