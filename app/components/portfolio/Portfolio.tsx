@@ -34,6 +34,7 @@ interface Portfolio {
   description: React.ReactNode;
   techIcon: IconType[];
   techName: string[];
+  shadowBorder: string;
 }
 
 function Portfolio() {
@@ -79,6 +80,7 @@ function Portfolio() {
       ),
       techIcon: [FaHtml5, FaCss3, FaJs],
       techName: ["HTML5", "CSS3", "JavaScript"],
+      shadowBorder: "shadow-green-700 border-green-500",
     },
     {
       id: 2,
@@ -99,6 +101,7 @@ function Portfolio() {
       ),
       techIcon: [FaReact, FaSass],
       techName: ["React", "SCSS"],
+      shadowBorder: "shadow-yellow-400 border-yellow-100",
     },
     {
       id: 3,
@@ -120,6 +123,7 @@ function Portfolio() {
       ),
       techIcon: [FaReact, SiNextdotjs, SiTailwindcss],
       techName: ["React", "NextJS", "TailwindCSS"],
+      shadowBorder: "shadow-sky-800 border-sky-800",
     },
     {
       id: 4,
@@ -142,6 +146,7 @@ function Portfolio() {
       ),
       techIcon: [FaHtml5, FaCss3, FaBootstrap],
       techName: ["HTML5", "CSS3", "Bootstrap"],
+      shadowBorder: "shadow-zinc-900 border-zinc-900",
     },
     {
       id: 5,
@@ -164,6 +169,7 @@ function Portfolio() {
       ),
       techIcon: [FaVuejs, SiQuasar, SiAxios],
       techName: ["VueJS", "Quasar", "Axios"],
+      shadowBorder: "shadow-cyan-800 border-cyan-800",
     },
     {
       id: 6,
@@ -185,6 +191,7 @@ function Portfolio() {
       ),
       techIcon: [FaHtml5, FaCss3],
       techName: ["HTML5", "CSS3"],
+      shadowBorder: "shadow-blue-500 border-blue-500",
     },
   ];
 
@@ -238,6 +245,7 @@ function Portfolio() {
               description,
               techIcon,
               techName,
+              shadowBorder,
             }) => {
               return (
                 <div key={id} className={`shadow-md shadow-gray-700`}>
@@ -258,9 +266,10 @@ function Portfolio() {
                             description,
                             techIcon,
                             techName,
+                            shadowBorder,
                           })
                     }
-                    className={`rounded-md duration-200 hover:shadow-md hover:shadow-gray-700 hover:border-4 cursor-pointer`}
+                    className={`rounded-md duration-200 hover:shadow-md hover:${shadowBorder} hover:border-4 cursor-pointer`}
                   />
                   <div className={`flex items-center justify-center`}>
                     <a
