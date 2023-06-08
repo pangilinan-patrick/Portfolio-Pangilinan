@@ -1,6 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { FaBars, FaGithub, FaTimes } from "react-icons/fa";
+import {
+  FaBars,
+  FaEnvelope,
+  FaFile,
+  FaGithub,
+  FaLinkedin,
+  FaTimes,
+} from "react-icons/fa";
 import ScrollLink from "../ScrollLink";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -22,6 +29,12 @@ const dropIn = {
 interface Link {
   id: number;
   link: string;
+}
+
+interface MobileLink {
+  id: number;
+  child: JSX.Element;
+  href: string;
 }
 
 function Navbar() {
@@ -52,6 +65,43 @@ function Navbar() {
     },
   ];
 
+  const mobileLinks: MobileLink[] = [
+    {
+      id: 1,
+      child: (
+        <>
+          <FaLinkedin size={15} />
+          <span className={`ml-1 text-gray-400 text-sm font-light`}>
+            LinkedIn
+          </span>
+        </>
+      ),
+      href: "https://linkedin.com/in/ptrk-pngln",
+    },
+    {
+      id: 2,
+      child: (
+        <>
+          <FaEnvelope size={15} />
+          <span className={`ml-1 text-gray-400 text-sm font-light`}>Mail</span>
+        </>
+      ),
+      href: "mailto:patrick_pangilinan@dlsl.edu.ph",
+    },
+    {
+      id: 3,
+      child: (
+        <>
+          <FaFile size={15} />
+          <span className={`ml-1 text-gray-400 text-sm font-light`}>
+            Resume
+          </span>
+        </>
+      ),
+      href: "/resume.pdf",
+    },
+  ];
+
   return (
     <div
       className={`flex justify-between items-center w-full h-20 text-white fixed bg-black px-4`}
@@ -78,6 +128,23 @@ function Navbar() {
                 </ScrollLink>
               );
             })}
+            {/* Social Links */}
+            <div className={`flex gap-5 mt-5`}>
+              {mobileLinks.map(({ id, child, href }) => {
+                return (
+                  <li key={id}>
+                    <a
+                      href={href}
+                      className={`flex justify-between items-center w-full text-gray-100 hover:scale-110 duration-200`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {child}
+                    </a>
+                  </li>
+                );
+              })}
+            </div>
           </motion.ul>
         )}
       </AnimatePresence>
