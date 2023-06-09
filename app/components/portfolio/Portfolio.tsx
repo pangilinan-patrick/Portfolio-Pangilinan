@@ -317,10 +317,11 @@ function Portfolio() {
                       tabIndex={-1}
                     >
                       <button
-                        className={`px-14 py-5 duration-200 hover:scale-105`}
+                        className={`px-14 py-4 duration-200 hover:scale-105 flex flex-col items-center justify-center gap-1`}
                         aria-label={`${title} Demo`}
                       >
                         <FaEye size={20} />
+                        <span className={`text-xs text-gray-300`}>Demo</span>
                       </button>
                     </a>
                     <a
@@ -330,10 +331,11 @@ function Portfolio() {
                       tabIndex={-1}
                     >
                       <button
-                        className={`px-14 py-5 duration-200 hover:scale-105`}
+                        className={`px-14 py-4 duration-200 hover:scale-105 flex flex-col items-center justify-center gap-1`}
                         aria-label={`${title} Repository`}
                       >
                         <FaCode size={20} />
+                        <span className={`text-xs text-gray-300`}>Code</span>
                       </button>
                     </a>
                   </div>
