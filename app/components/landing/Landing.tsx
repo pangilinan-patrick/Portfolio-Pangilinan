@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import HeroImage from "app/assets/heroImage.png";
+import HeroImage from "app/assets/heroImage.jpg";
 import Image from "next/image";
 import { FaAngleRight } from "react-icons/fa";
 import ScrollLink from "../ScrollLink";

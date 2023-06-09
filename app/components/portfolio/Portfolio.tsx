@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import myDbuddy from "public/mydbuddy/mydbuddy.png";
+import myDbuddy from "public/mydbuddy/mydbuddy.jpg";
 import calculator from "public/calculator/calculator.jpg";
 import todoList from "public/todo-list/todolist.jpg";
 import scienceWeb from "public/physical-science/scienceweb.jpg";
@@ -61,7 +61,7 @@ function Portfolio() {
       src: myDbuddy,
       folder: [
         {
-          path: "/mydbuddy/mydbuddy.png",
+          path: "/mydbuddy/mydbuddy.jpg",
           alt: "Banner for my d buddy",
         },
         {
