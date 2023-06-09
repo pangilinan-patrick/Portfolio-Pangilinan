@@ -19,7 +19,7 @@ export default function Home() {
       <SocialLinks />
       <div
         id="footer"
-        className={`flex justify-center bg-gray-800 pb-1 mb-0 text-xs text-gray-600`}
+        className={`flex justify-center bg-gray-800 pb-1 mb-0 text-xs text-gray-300`}
       >
         Built with NextJS by Patrick Pangilinan
       </div>

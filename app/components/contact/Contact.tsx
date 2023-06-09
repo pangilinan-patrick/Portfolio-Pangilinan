@@ -58,33 +58,42 @@ function Contact() {
             method="POST"
             className={`flex flex-col w-full md:w-1/2`}
           >
-            <label className={`mb-1`}>Name</label>
+            <label id="name-label" className={`mb-1`}>
+              Name
+            </label>
             <input
               type="text"
               name="name"
               placeholder="Enter your name"
+              aria-labelledby="name-label"
               className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4 ${
                 !isNameValid ? "border-red-500" : ""
               }`}
               maxLength={50}
               required
             />
-            <label className={`mb-1`}>Email</label>
+            <label id="email-label" className={`mb-1`}>
+              Email
+            </label>
             <input
               type="email"
               name="email"
               placeholder="Enter your email"
+              aria-labelledby="email-label"
               className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4 ${
                 !isEmailValid ? "border-red-500" : ""
               }`}
               maxLength={50}
               required
             />
-            <label className={`mb-1`}>Message</label>
+            <label id="message-label" className={`mb-1`}>
+              Message
+            </label>
             <textarea
               name="message"
               rows={10}
               placeholder="Enter your message"
+              aria-labelledby="message-label"
               className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none`}
               maxLength={400}
               required

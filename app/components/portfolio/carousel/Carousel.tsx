@@ -5,7 +5,7 @@ import { wrap } from "popmotion";
 import "app/components/portfolio/carousel/styles.css";
 
 interface CarouselProps {
-  folder: string[];
+  folder: { path: string; alt: string }[];
 }
 
 export const Carousel = ({ folder }: CarouselProps) => {
@@ -80,9 +80,11 @@ export const Carousel = ({ folder }: CarouselProps) => {
         <motion.img
           className={`absolute w-[100vw] ${isLoading ? "hidden" : ""}`}
           key={page}
-          src={folder[imageIndex]}
+          src={folder[imageIndex].path}
+          alt={folder[imageIndex].alt}
           custom={direction}
           variants={variants}
+          //ALT
           initial="enter"
           animate="center"
           exit="exit"
@@ -106,12 +108,20 @@ export const Carousel = ({ folder }: CarouselProps) => {
           onError={handleImageError}
         />
       </AnimatePresence>
-      <div className="next text-black" onClick={() => paginate(1)}>
+      <button
+        className="next text-black"
+        onClick={() => paginate(1)}
+        aria-label="Next image"
+      >
         {"‣"}
-      </div>
-      <div className="prev text-black" onClick={() => paginate(-1)}>
+      </button>
+      <button
+        className="prev text-black"
+        onClick={() => paginate(-1)}
+        aria-label="Previous image"
+      >
         {"‣"}
-      </div>
+      </button>
     </>
   );
 };

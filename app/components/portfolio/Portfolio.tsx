@@ -27,7 +27,7 @@ interface Portfolio {
   id: number;
   title: string;
   src: StaticImageData;
-  folder: string[];
+  folder: { path: string; alt: string }[];
   demoLink: string;
   codeLink: string;
   alt: string;
@@ -60,9 +60,18 @@ function Portfolio() {
       title: "MyDBuddy Chatbot",
       src: myDbuddy,
       folder: [
-        "/mydbuddy/mydbuddy.png",
-        "/mydbuddy/open-chatbot.gif",
-        "/mydbuddy/rule-based.gif",
+        {
+          path: "/mydbuddy/mydbuddy.png",
+          alt: "Banner for my d buddy",
+        },
+        {
+          path: "/mydbuddy/open-chatbot.gif",
+          alt: "A demonstration of how the chatbot is opened",
+        },
+        {
+          path: "/mydbuddy/rule-based.gif",
+          alt: "Showing the rule-based capabilities of the chatbot",
+        },
       ],
       demoLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
       codeLink: "https://github.com/pangilinan-patrick/MyDBuddy-Channel-Web",
@@ -86,7 +95,12 @@ function Portfolio() {
       id: 2,
       title: "Calculator React App",
       src: calculator,
-      folder: ["/calculator/calculator.jpg"],
+      folder: [
+        {
+          path: "/calculator/calculator.jpg",
+          alt: "A gist of the calculator UI built with reactjs",
+        },
+      ],
       demoLink: "https://pangilinan-patrick.github.io/calculator-react/",
       codeLink: "https://github.com/pangilinan-patrick/calculator-react",
       alt: "calculator app built with reactjs",
@@ -107,7 +121,12 @@ function Portfolio() {
       id: 3,
       title: "Todo List React App",
       src: todoList,
-      folder: ["/todo-list/todolist.jpg"],
+      folder: [
+        {
+          path: "/todo-list/todolist.jpg",
+          alt: "A gist of the Todo List UI built with NextJS",
+        },
+      ],
       demoLink: "https://todo-app-react-pangilinan-patrick.vercel.app/",
       codeLink: "https://github.com/pangilinan-patrick/todo-app-react",
       alt: "todo list app built with reactjs",
@@ -129,7 +148,12 @@ function Portfolio() {
       id: 4,
       title: "Physical Science Website",
       src: scienceWeb,
-      folder: ["/physical-science/scienceweb.jpg"],
+      folder: [
+        {
+          path: "/physical-science/scienceweb.jpg",
+          alt: "Initial look at the physical science website",
+        },
+      ],
       demoLink:
         "https://pangilinan-patrick.github.io/physical-science-web-shs/Home.html",
       codeLink:
@@ -152,7 +176,12 @@ function Portfolio() {
       id: 5,
       title: "User Management System",
       src: userManagement,
-      folder: ["/user-management/usermanagement.jpg"],
+      folder: [
+        {
+          path: "/user-management/usermanagement.jpg",
+          alt: "The forms page of the user management system",
+        },
+      ],
       demoLink: "https://user-management-system-vue.vercel.app/#/list-of-users",
       codeLink:
         "https://github.com/pangilinan-patrick/user-management-system-vue",
@@ -174,7 +203,12 @@ function Portfolio() {
     {
       id: 6,
       src: innospireWeb,
-      folder: ["/innospire/innospireweb.jpg"],
+      folder: [
+        {
+          path: "/innospire/innospireweb.jpg",
+          alt: "Initial page of the draft innospire website",
+        },
+      ],
       title: "Innospire IT Solutions Website",
       demoLink:
         "https://pangilinan-patrick.github.io/innospire-website-shs/Home.html",
@@ -249,9 +283,8 @@ function Portfolio() {
             }) => {
               return (
                 <div key={id} className={`shadow-md shadow-gray-700`}>
-                  <Image
-                    src={src}
-                    alt={alt}
+                  <button
+                    aria-label={`${title} description and details`}
                     onClick={() =>
                       modalOpen
                         ? close()
@@ -269,16 +302,23 @@ function Portfolio() {
                             shadowBorder,
                           })
                     }
-                    className={`rounded-md duration-200 hover:shadow-md hover:${shadowBorder} hover:border-4 cursor-pointer`}
-                  />
+                  >
+                    <Image
+                      src={src}
+                      alt={alt}
+                      className={`rounded-md duration-200 hover:shadow-md hover:${shadowBorder} hover:border-4 cursor-pointer`}
+                    />
+                  </button>
                   <div className={`flex items-center justify-center`}>
                     <a
                       href={demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      tabIndex={-1}
                     >
                       <button
                         className={`px-14 py-5 duration-200 hover:scale-105`}
+                        aria-label={`${title} Demo`}
                       >
                         <FaEye size={20} />
                       </button>
@@ -287,9 +327,11 @@ function Portfolio() {
                       href={codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      tabIndex={-1}
                     >
                       <button
                         className={`px-14 py-5 duration-200 hover:scale-105`}
+                        aria-label={`${title} Repository`}
                       >
                         <FaCode size={20} />
                       </button>

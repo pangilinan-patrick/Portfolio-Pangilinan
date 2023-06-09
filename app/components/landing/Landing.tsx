@@ -21,7 +21,7 @@ function Landing() {
           <h2 className="text-4xl sm:text-7xl font-bold">
             I&apos;m a Front-End Developer
           </h2>
-          <p className={`text-gray-500 py-4 sm:mr-28`}>
+          <p className={`text-gray-400 py-4 sm:mr-28`}>
             Hi, I&apos;m Patrick Pangilinan! I&apos;m a diligent 4th Year
             Computer Science Student with skills in programming, and
             specialization in Front-end Development. Committed to continuous
@@ -29,18 +29,16 @@ function Landing() {
             opportunities to expand my skills and knowledge.
           </p>
 
-          <div>
-            <ScrollLink className="btn" href="#portfolio">
-              <button
-                className={`group w-fit px-7 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500`}
-              >
-                Portfolio
-                <span className={`group-hover:rotate-90 duration-300 ml-1`}>
-                  <FaAngleRight />
-                </span>
-              </button>
-            </ScrollLink>
-          </div>
+          <ScrollLink
+            href="#portfolio"
+            className={`group w-fit px-7 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500`}
+            aria-label="Go to portfolio section"
+          >
+            Portfolio
+            <span className={`group-hover:rotate-90 duration-300 ml-1`}>
+              <FaAngleRight />
+            </span>
+          </ScrollLink>
         </div>
 
         <div>

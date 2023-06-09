@@ -115,8 +115,14 @@ function Experience() {
                 key={id}
                 className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
               >
-                <Icon size={70} className={`w-20 mx-auto ${color} tech-icon`} />
-                <p className={`mt-4`}>{title}</p>
+                <Icon
+                  size={70}
+                  className={`w-20 mx-auto ${color} tech-icon`}
+                  aria-labelledby={`tech-exp-icon-${id}`}
+                />
+                <p id={`tech-exp-icon-${id}`} className={`mt-4`}>
+                  {title}
+                </p>
               </div>
             );
           })}

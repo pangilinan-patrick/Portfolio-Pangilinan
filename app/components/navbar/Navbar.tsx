@@ -71,7 +71,7 @@ function Navbar() {
       child: (
         <>
           <FaLinkedin size={15} />
-          <span className={`ml-1 text-gray-400 text-sm font-light`}>
+          <span className={`ml-2 text-gray-400 text-sm font-medium`}>
             LinkedIn
           </span>
         </>
@@ -83,7 +83,7 @@ function Navbar() {
       child: (
         <>
           <FaEnvelope size={15} />
-          <span className={`ml-1 text-gray-400 text-sm font-light`}>Mail</span>
+          <span className={`ml-2 text-gray-400 text-sm font-medium`}>Mail</span>
         </>
       ),
       href: "mailto:patrick_pangilinan@dlsl.edu.ph",
@@ -93,7 +93,7 @@ function Navbar() {
       child: (
         <>
           <FaFile size={15} />
-          <span className={`ml-1 text-gray-400 text-sm font-light`}>
+          <span className={`ml-2 text-gray-400 text-sm font-medium`}>
             Resume
           </span>
         </>
@@ -103,7 +103,7 @@ function Navbar() {
   ];
 
   return (
-    <div
+    <nav
       className={`flex justify-between items-center w-full h-20 text-white fixed bg-black px-4`}
     >
       <AnimatePresence initial={false} onExitComplete={() => null}>
@@ -118,18 +118,20 @@ function Navbar() {
           >
             {links.map(({ id, link }) => {
               return (
-                <ScrollLink key={id} className="btn" href={`#${link}`}>
-                  <li
-                    onClick={() => setNav(!nav)}
-                    className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none py-6 text-4xl`}
-                  >
+                <li
+                  key={id}
+                  onClick={() => setNav(!nav)}
+                  className={`px-4 cursor-pointer font-medium text-gray-400 hover:scale-105 duration-200 list-none py-6 text-4xl`}
+                  role="link"
+                >
+                  <ScrollLink className="btn" href={`#${link}`}>
                     {link}
-                  </li>
-                </ScrollLink>
+                  </ScrollLink>
+                </li>
               );
             })}
             {/* Social Links */}
-            <div className={`flex gap-5 mt-5`}>
+            <ul className={`flex gap-5 mt-5`}>
               {mobileLinks.map(({ id, child, href }) => {
                 return (
                   <li key={id}>
@@ -144,34 +146,37 @@ function Navbar() {
                   </li>
                 );
               })}
-            </div>
+            </ul>
           </motion.ul>
         )}
       </AnimatePresence>
 
-      <div>
-        <a
-          href="https://github.com/pangilinan-patrick"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub
-            className={`text-3xl cursor-pointer font-medium  hover:scale-105 duration-200 list-none`}
-          />
-        </a>
-      </div>
+      <a
+        href="https://github.com/pangilinan-patrick"
+        aria-label={`Link to my Github`}
+        target="_blank"
+        rel="noopener noreferrer"
+        tabIndex={-1}
+      >
+        <FaGithub
+          className={`text-3xl cursor-pointer font-medium  hover:scale-105 duration-200 list-none`}
+          aria-label={`See what I've been working on in my Github`}
+          tabIndex={0}
+          role="link"
+        />
+      </a>
 
       <ul className={`hidden md:flex`}>
         {/* Looping over links array and using object destructuring to shorthand retrieving the properties */}
         {links.map(({ id, link }) => {
           return (
-            <ScrollLink key={id} className="btn" href={`#${link}`}>
-              <li
-                className={`px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 list-none capitalize select-none`}
-              >
-                {link}
-              </li>
-            </ScrollLink>
+            <li
+              key={id}
+              className={`px-4 cursor-pointer font-medium text-gray-400 hover:scale-105 duration-200 list-none capitalize select-none`}
+              role="link"
+            >
+              <ScrollLink href={`#${link}`}>{link}</ScrollLink>
+            </li>
           );
         })}
       </ul>
@@ -183,7 +188,7 @@ function Navbar() {
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
-    </div>
+    </nav>
   );
 }
 
