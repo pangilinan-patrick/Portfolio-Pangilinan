@@ -1,5 +1,6 @@
 "use client";
 import React, { FormEvent, useState } from "react";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [isNameValid, setIsNameValid] = useState(true);
@@ -41,7 +42,13 @@ function Contact() {
       <div
         className={`flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full`}
       >
-        <div className={`pb-8`}>
+        <motion.div
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true, amount: 0.8 }}
+          className={`pb-8`}
+        >
           <p className={`text-4xl font-bold inline border-b-4 border-gray-500`}>
             Contact
           </p>
@@ -49,7 +56,7 @@ function Contact() {
             Submit the form below to get in touch with me. This will send a
             response to me via getform.io.
           </p>
-        </div>
+        </motion.div>
 
         <div className={`flex justify-center items-center`}>
           <form
@@ -58,52 +65,80 @@ function Contact() {
             method="POST"
             className={`flex flex-col w-full md:w-1/2`}
           >
-            <label id="name-label" className={`mb-1`}>
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              aria-labelledby="name-label"
-              className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4 ${
-                !isNameValid ? "border-red-500" : ""
-              }`}
-              maxLength={50}
-              required
-            />
-            <label id="email-label" className={`mb-1`}>
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              aria-labelledby="email-label"
-              className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4 ${
-                !isEmailValid ? "border-red-500" : ""
-              }`}
-              maxLength={50}
-              required
-            />
-            <label id="message-label" className={`mb-1`}>
-              Message
-            </label>
-            <textarea
-              name="message"
-              rows={10}
-              placeholder="Enter your message"
-              aria-labelledby="message-label"
-              className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none`}
-              maxLength={400}
-              required
-            ></textarea>
+            <motion.div
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className={`flex flex-col`}
+            >
+              <label id="name-label" className={`mb-1`}>
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                aria-labelledby="name-label"
+                className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4 ${
+                  !isNameValid ? "border-red-500" : ""
+                }`}
+                maxLength={50}
+                required
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className={`flex flex-col`}
+            >
+              <label id="email-label" className={`mb-1`}>
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                aria-labelledby="email-label"
+                className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none mb-4 ${
+                  !isEmailValid ? "border-red-500" : ""
+                }`}
+                maxLength={50}
+                required
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className={`flex flex-col`}
+            >
+              <label id="message-label" className={`mb-1`}>
+                Message
+              </label>
+              <textarea
+                name="message"
+                rows={10}
+                placeholder="Enter your message"
+                aria-labelledby="message-label"
+                className={`p-2 bg-transparent border-2 rounded-md text-white focus:outline-none`}
+                maxLength={400}
+                required
+              ></textarea>
+            </motion.div>
 
-            <button
+            <motion.button
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.8 }}
               className={`text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300`}
             >
               Let&apos;s talk
-            </button>
+            </motion.button>
           </form>
         </div>
       </div>
