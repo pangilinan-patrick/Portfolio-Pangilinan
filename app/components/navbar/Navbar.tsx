@@ -118,7 +118,11 @@ function Navbar() {
           >
             {links.map(({ id, link }) => {
               return (
-                <li
+                <motion.li
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: (id / 10) * 2.2 }}
+                  viewport={{ once: true, amount: 0.8 }}
                   key={id}
                   onClick={() => setNav(!nav)}
                   className={`px-4 cursor-pointer font-medium text-gray-400 hover:scale-105 duration-200 list-none py-6 text-4xl`}
@@ -127,14 +131,20 @@ function Navbar() {
                   <ScrollLink className="btn" href={`#${link}`}>
                     {link}
                   </ScrollLink>
-                </li>
+                </motion.li>
               );
             })}
             {/* Social Links */}
             <ul className={`flex gap-5 mt-5`}>
               {mobileLinks.map(({ id, child, href }) => {
                 return (
-                  <li key={id}>
+                  <motion.li
+                    key={id}
+                    initial={{ opacity: 0, y: 70 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.7 }}
+                    viewport={{ once: true, amount: 0.8 }}
+                  >
                     <a
                       href={href}
                       className={`flex justify-between items-center w-full text-gray-100 hover:scale-110 duration-200`}
@@ -143,7 +153,7 @@ function Navbar() {
                     >
                       {child}
                     </a>
-                  </li>
+                  </motion.li>
                 );
               })}
             </ul>
