@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IconType } from "react-icons";
 import {
@@ -10,6 +11,7 @@ import {
   FaVuejs,
 } from "react-icons/fa";
 import { SiNextdotjs, SiQuasar } from "react-icons/si";
+import { motion } from "framer-motion";
 
 interface Tech {
   id: number;
@@ -94,7 +96,13 @@ function Experience() {
       <div
         className={`max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white`}
       >
-        <div className={`py-8 sm:pb-8 sm:pt-0`}>
+        <motion.div
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true, amount: 0.8 }}
+          className={`py-8 sm:pb-8 sm:pt-0`}
+        >
           <p
             className={`text-4xl font-bold border-b-4 border-gray-500 p-2 inline`}
           >
@@ -103,7 +111,7 @@ function Experience() {
           <p className={`py-6`}>
             These are some of the technologies I&apos;ve worked with.
           </p>
-        </div>
+        </motion.div>
 
         {/* Tech Icons Cards  */}
         <div
@@ -111,7 +119,11 @@ function Experience() {
         >
           {tech.map(({ id, title, icon: Icon, color, style }) => {
             return (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 70 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: (id / 10) * 3 }}
+                viewport={{ once: true, amount: 0.8 }}
                 key={id}
                 className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
               >
@@ -123,7 +135,7 @@ function Experience() {
                 <p id={`tech-exp-icon-${id}`} className={`mt-4`}>
                   {title}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
