@@ -19,7 +19,7 @@ import {
   FaVuejs,
 } from "react-icons/fa";
 import { SiAxios, SiNextdotjs, SiQuasar, SiTailwindcss } from "react-icons/si";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import ProjectDetails from "./ProjectDetails";
 import { IconType } from "react-icons";
 
@@ -253,7 +253,14 @@ function Portfolio() {
       <div
         className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full`}
       >
-        <div className={`py-8 sm:pb-8 sm:pt-0`}>
+        {/* <div className={`py-8 sm:pb-8 sm:pt-0`}> */}
+        <motion.div
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true, amount: 0.8 }}
+          className={`py-8 sm:pb-8 sm:pt-0`}
+        >
           <p className={`text-4xl font-bold inline border-b-4 border-gray-500`}>
             Portfolio
           </p>
@@ -263,7 +270,7 @@ function Portfolio() {
             the project. You can also click on the images for a description of
             the project.
           </p>
-        </div>
+        </motion.div>
 
         {/* Project cards */}
         <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0`}>
@@ -282,7 +289,14 @@ function Portfolio() {
               shadowBorder,
             }) => {
               return (
-                <div key={id} className={`shadow-md shadow-gray-700`}>
+                <motion.div
+                  initial={{ opacity: 0, y: 70 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: (id / 10) * 3 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  key={id}
+                  className={`shadow-md shadow-gray-700`}
+                >
                   <button
                     aria-label={`${title} description and details`}
                     onClick={() =>
@@ -339,7 +353,7 @@ function Portfolio() {
                       </button>
                     </a>
                   </div>
-                </div>
+                </motion.div>
               );
             }
           )}
