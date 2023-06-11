@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import HeroImage from "app/assets/heroImage.jpg";
+import spaceship from "app/assets/spaceship.png";
 import Image from "next/image";
 import { FaAngleRight } from "react-icons/fa";
 import ScrollLink from "../ScrollLink";
@@ -63,7 +64,22 @@ function Landing() {
         </div>
 
         {/* Last Section Appear from top */}
-        <div>
+        <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 1.5 }}
+            className={`absolute right-14 sm:right-24 md:-right-4 bottom-3 md:-bottom-2 -z-1`}
+          >
+            <motion.div
+              animate={{ y: [-5, 5, -5] }} // Specify the y-axis animation values
+              transition={{ duration: 5, repeat: Infinity }} // Set the animation duration and repeat it infinitely
+              className={`w-32 sm:w-36`}
+            >
+              <Image src={spaceship} alt="spaceship" />
+            </motion.div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}

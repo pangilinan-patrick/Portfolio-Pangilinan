@@ -104,7 +104,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`flex justify-between items-center w-full h-20 text-white fixed bg-black px-4`}
+      className={`flex justify-between items-center w-full h-20 text-white fixed bg-black px-4 z-50`}
     >
       <AnimatePresence initial={false} onExitComplete={() => null}>
         {/* Mobile Links List */}
