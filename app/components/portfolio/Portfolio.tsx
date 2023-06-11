@@ -264,7 +264,7 @@ function Portfolio() {
           <p className={`text-4xl font-bold inline border-b-4 border-gray-500`}>
             Portfolio
           </p>
-          <p className={`py-6 md:mr-64`}>
+          <p className={`py-6`}>
             Check out some of my work! The eye icon will show a demo of my work
             if it&apos;s deployed and the code icon will show the repository of
             the project. You can also click on the images for a description of
@@ -323,7 +323,7 @@ function Portfolio() {
                       className={`rounded-md duration-200 hover:shadow-md hover:${shadowBorder} hover:border-4 cursor-pointer`}
                     />
                   </button>
-                  <div className={`flex items-center justify-center`}>
+                  <div className={`flex items-center justify-evenly py-4`}>
                     <a
                       href={demoLink}
                       target="_blank"
@@ -331,7 +331,7 @@ function Portfolio() {
                       tabIndex={-1}
                     >
                       <button
-                        className={`px-14 py-4 duration-200 hover:scale-105 flex flex-col items-center justify-center gap-1`}
+                        className={`duration-200 hover:scale-105 flex flex-col items-center gap-1`}
                         aria-label={`${title} Demo`}
                       >
                         <FaEye size={20} />
@@ -345,7 +345,7 @@ function Portfolio() {
                       tabIndex={-1}
                     >
                       <button
-                        className={`px-14 py-4 duration-200 hover:scale-105 flex flex-col items-center justify-center gap-1`}
+                        className={`duration-200 hover:scale-105 flex flex-col items-center gap-1`}
                         aria-label={`${title} Repository`}
                       >
                         <FaCode size={20} />
