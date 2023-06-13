@@ -4,6 +4,7 @@ import { FaLink, FaTimes } from "react-icons/fa";
 import Backdrop from "./Backdrop";
 import { IconType } from "react-icons";
 import { Carousel } from "./carousel/Carousel";
+import { StaticImageData } from "next/image";
 
 const dropIn = {
   hidden: {
@@ -31,7 +32,7 @@ interface ProjectDetailsProps {
   project: {
     id: number;
     title: string;
-    folder: { path: string; alt: string }[];
+    folder: { path: string | StaticImageData; alt: string }[];
     demoLink: string;
     codeLink: string;
     description: React.ReactNode;
@@ -77,8 +78,6 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
           <div className={`max-w-4xl w-full`}>
             <div className={`relative flex justify-center items-center`}>
               <Carousel folder={project.folder} />
-              {/* Space behind the image */}
-              <div className="aspect-w-2 aspect-h-1"></div>
             </div>
           </div>
 

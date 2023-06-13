@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import myDbuddy from "public/mydbuddy/mydbuddy.jpg";
+import openChatbot from "public/mydbuddy/open-chatbot.gif";
+import ruleBased from "public/mydbuddy/rule-based.gif";
 import calculator from "public/calculator/calculator.jpg";
 import todoList from "public/todo-list/todolist.jpg";
 import scienceWeb from "public/physical-science/scienceweb.jpg";
@@ -27,7 +29,7 @@ interface Portfolio {
   id: number;
   title: string;
   src: StaticImageData;
-  folder: { path: string; alt: string }[];
+  folder: { path: string | StaticImageData; alt: string }[];
   demoLink: string;
   codeLink: string;
   alt: string;
@@ -61,15 +63,15 @@ function Portfolio() {
       src: myDbuddy,
       folder: [
         {
-          path: "/mydbuddy/mydbuddy.jpg",
+          path: myDbuddy,
           alt: "Banner for my d buddy",
         },
         {
-          path: "/mydbuddy/open-chatbot.gif",
+          path: openChatbot,
           alt: "A demonstration of how the chatbot is opened",
         },
         {
-          path: "/mydbuddy/rule-based.gif",
+          path: ruleBased,
           alt: "Showing the rule-based capabilities of the chatbot",
         },
       ],
@@ -97,7 +99,7 @@ function Portfolio() {
       src: calculator,
       folder: [
         {
-          path: "/calculator/calculator.jpg",
+          path: calculator,
           alt: "A gist of the calculator UI built with reactjs",
         },
       ],
@@ -123,7 +125,7 @@ function Portfolio() {
       src: todoList,
       folder: [
         {
-          path: "/todo-list/todolist.jpg",
+          path: todoList,
           alt: "A gist of the Todo List UI built with NextJS",
         },
       ],
@@ -150,7 +152,7 @@ function Portfolio() {
       src: scienceWeb,
       folder: [
         {
-          path: "/physical-science/scienceweb.jpg",
+          path: scienceWeb,
           alt: "Initial look at the physical science website",
         },
       ],
@@ -178,7 +180,7 @@ function Portfolio() {
       src: userManagement,
       folder: [
         {
-          path: "/user-management/usermanagement.jpg",
+          path: userManagement,
           alt: "The forms page of the user management system",
         },
       ],
@@ -205,7 +207,7 @@ function Portfolio() {
       src: innospireWeb,
       folder: [
         {
-          path: "/innospire/innospireweb.jpg",
+          path: innospireWeb,
           alt: "Initial page of the draft innospire website",
         },
       ],

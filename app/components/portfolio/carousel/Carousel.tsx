@@ -3,9 +3,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import "app/components/portfolio/carousel/styles.css";
+import Image, { StaticImageData } from "next/image";
 
 interface CarouselProps {
-  folder: { path: string; alt: string }[];
+  folder: { path: string | StaticImageData; alt: string }[];
 }
 
 export const Carousel = ({ folder }: CarouselProps) => {
@@ -46,7 +47,10 @@ export const Carousel = ({ folder }: CarouselProps) => {
   };
 
   const handleImageLoad = () => {
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    // setLoading(false);
   };
 
   const handleImageError = () => {
@@ -77,36 +81,41 @@ export const Carousel = ({ folder }: CarouselProps) => {
       )}
 
       <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          className={`absolute w-[100vw] ${isLoading ? "hidden" : ""}`}
-          key={page}
-          src={folder[imageIndex].path}
-          alt={folder[imageIndex].alt}
-          custom={direction}
-          variants={variants}
-          //ALT
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 },
-          }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
+        <div>
+          <motion.div
+            key={page}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
+            }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
 
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
-          onLoad={handleImageLoad}
-          onError={handleImageError}
-        />
+              if (swipe < -swipeConfidenceThreshold) {
+                paginate(1);
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(-1);
+              }
+            }}
+          >
+            <Image
+              className={` ${isLoading ? "opacity-0" : "opacity-100"}`}
+              src={folder[imageIndex].path}
+              alt={folder[imageIndex].alt}
+              placeholder="empty"
+              onLoadingComplete={handleImageLoad}
+              onError={handleImageError}
+            />
+          </motion.div>
+        </div>
       </AnimatePresence>
       <button
         className="next text-black"
