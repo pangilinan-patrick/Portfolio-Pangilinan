@@ -76,7 +76,7 @@ const ProjectDetails = ({ handleClose, project }: ProjectDetailsProps) => {
           </div>
 
           <div className={`max-w-4xl w-full`}>
-            <div className={`relative flex justify-center items-center`}>
+            <div className={`relative`}>
               <Carousel folder={project.folder} />
             </div>
           </div>

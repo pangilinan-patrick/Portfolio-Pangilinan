@@ -47,10 +47,7 @@ export const Carousel = ({ folder }: CarouselProps) => {
   };
 
   const handleImageLoad = () => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    // setLoading(false);
+    setLoading(false);
   };
 
   const handleImageError = () => {
@@ -80,9 +77,10 @@ export const Carousel = ({ folder }: CarouselProps) => {
         </div>
       )}
 
-      <AnimatePresence initial={false} custom={direction}>
-        <div>
+      <div className="aspect-w-2 aspect-h-1">
+        <AnimatePresence initial={false} custom={direction}>
           <motion.div
+            className="absolute"
             key={page}
             custom={direction}
             variants={variants}
@@ -117,8 +115,9 @@ export const Carousel = ({ folder }: CarouselProps) => {
               onError={handleImageError}
             />
           </motion.div>
-        </div>
-      </AnimatePresence>
+        </AnimatePresence>
+      </div>
+
       <button
         className="next text-black"
         onClick={() => paginate(1)}
