@@ -131,7 +131,7 @@ function Navbar() {
                 <motion.li
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: (id / 10) * 2.2 }}
+                  transition={{ duration: 0.3, delay: (id / 10) * 1 }}
                   viewport={{ once: true, amount: 0.8 }}
                   key={id}
                   onClick={() => setNav(!nav)}
@@ -152,7 +152,7 @@ function Navbar() {
                     key={id}
                     initial={{ opacity: 0, y: 70 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.7 }}
+                    transition={{ duration: 0.5, delay: 1 }}
                     viewport={{ once: true, amount: 0.8 }}
                   >
                     <a
