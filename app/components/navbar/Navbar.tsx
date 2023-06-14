@@ -102,6 +102,16 @@ function Navbar() {
     },
   ];
 
+  const close = () => {
+    setNav(false);
+    document.body.classList.remove("overflow-hidden");
+  };
+
+  const open = () => {
+    setNav(true);
+    document.body.classList.add("overflow-hidden");
+  };
+
   return (
     <nav
       className={`flex justify-between items-center w-full h-20 text-white fixed bg-black px-4 z-50`}
@@ -193,7 +203,7 @@ function Navbar() {
 
       {/* Hamburger Menu */}
       <div
-        onClick={() => setNav(!nav)}
+        onClick={() => (nav ? close() : open())}
         className={`cursor-pointer z-10 text-gray-500 md:hidden`}
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
