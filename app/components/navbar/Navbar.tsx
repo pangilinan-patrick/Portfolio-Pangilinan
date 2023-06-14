@@ -134,7 +134,7 @@ function Navbar() {
                   transition={{ duration: 0.3, delay: (id / 10) * 1 }}
                   viewport={{ once: true, amount: 0.8 }}
                   key={id}
-                  onClick={() => setNav(!nav)}
+                  onClick={() => close()}
                   className={`px-4 cursor-pointer font-medium text-gray-400 hover:scale-105 duration-200 list-none py-6 text-4xl`}
                   role="link"
                 >

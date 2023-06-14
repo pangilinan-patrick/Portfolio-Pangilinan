@@ -255,7 +255,6 @@ function Portfolio() {
       <div
         className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full`}
       >
-        {/* <div className={`py-8 sm:pb-8 sm:pt-0`}> */}
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
