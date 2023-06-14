@@ -107,11 +107,13 @@ export const Carousel = ({ folder }: CarouselProps) => {
             }}
           >
             <Image
-              className={` ${isLoading ? "opacity-0" : "opacity-100"}`}
+              className={`transition-opacity duration-500 ${
+                isLoading ? "opacity-0" : "opacity-100"
+              }`}
               src={folder[imageIndex].path}
               alt={folder[imageIndex].alt}
               placeholder="empty"
-              onLoadingComplete={handleImageLoad}
+              onLoad={handleImageLoad}
               onError={handleImageError}
             />
           </motion.div>
