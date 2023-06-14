@@ -91,7 +91,7 @@ function Portfolio() {
       ),
       techIcon: [FaHtml5, FaCss3, FaJs],
       techName: ["HTML5", "CSS3", "JavaScript"],
-      shadowBorder: "shadow-green-700 border-green-500",
+      shadowBorder: "shadow-green-700 outline-green-500",
     },
     {
       id: 2,
@@ -117,7 +117,7 @@ function Portfolio() {
       ),
       techIcon: [FaReact, FaSass],
       techName: ["React", "SCSS"],
-      shadowBorder: "shadow-yellow-400 border-yellow-100",
+      shadowBorder: "shadow-yellow-400 outline-yellow-100",
     },
     {
       id: 3,
@@ -144,7 +144,7 @@ function Portfolio() {
       ),
       techIcon: [FaReact, SiNextdotjs, SiTailwindcss],
       techName: ["React", "NextJS", "TailwindCSS"],
-      shadowBorder: "shadow-sky-800 border-sky-800",
+      shadowBorder: "shadow-sky-800 outline-sky-800",
     },
     {
       id: 4,
@@ -172,7 +172,7 @@ function Portfolio() {
       ),
       techIcon: [FaHtml5, FaCss3, FaBootstrap],
       techName: ["HTML5", "CSS3", "Bootstrap"],
-      shadowBorder: "shadow-zinc-900 border-zinc-900",
+      shadowBorder: "shadow-zinc-900 outline-zinc-900",
     },
     {
       id: 5,
@@ -200,7 +200,7 @@ function Portfolio() {
       ),
       techIcon: [FaVuejs, SiQuasar, SiAxios],
       techName: ["VueJS", "Quasar", "Axios"],
-      shadowBorder: "shadow-cyan-800 border-cyan-800",
+      shadowBorder: "shadow-cyan-800 outline-cyan-800",
     },
     {
       id: 6,
@@ -227,7 +227,7 @@ function Portfolio() {
       ),
       techIcon: [FaHtml5, FaCss3],
       techName: ["HTML5", "CSS3"],
-      shadowBorder: "shadow-blue-500 border-blue-500",
+      shadowBorder: "shadow-blue-500 outline-blue-500",
     },
   ];
 
@@ -297,7 +297,7 @@ function Portfolio() {
                   transition={{ duration: 0.5, delay: (id / 10) * 3 }}
                   viewport={{ once: true, amount: 0.8 }}
                   key={id}
-                  className={`shadow-md shadow-gray-700`}
+                  className={`shadow-md shadow-gray-950`}
                 >
                   <button
                     aria-label={`${title} description and details`}
@@ -322,7 +322,7 @@ function Portfolio() {
                     <Image
                       src={src}
                       alt={alt}
-                      className={`rounded-md duration-200 hover:shadow-md hover:${shadowBorder} hover:border-4 cursor-pointer`}
+                      className={`rounded-md duration-200 hover:shadow-md hover:${shadowBorder} hover:outline outline-2 hover:scale-105 cursor-pointer`}
                     />
                   </button>
                   <div className={`flex items-center justify-evenly py-4`}>
