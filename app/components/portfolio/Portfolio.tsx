@@ -294,8 +294,12 @@ function Portfolio() {
                 <motion.div
                   initial={{ opacity: 0, y: 70 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: (id / 10) * 3 }}
-                  viewport={{ once: true, amount: 0.8 }}
+                  transition={
+                    typeof window !== "undefined" && window.innerWidth < 768
+                      ? { duration: 0.5, delay: 0.3 }
+                      : { duration: 0.5, delay: (id / 10) * 3 }
+                  }
+                  viewport={{ once: true, amount: 0.5 }}
                   key={id}
                   className={`shadow-md shadow-gray-950`}
                 >
