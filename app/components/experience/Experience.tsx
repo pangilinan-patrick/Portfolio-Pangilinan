@@ -119,23 +119,24 @@ function Experience() {
         >
           {tech.map(({ id, title, icon: Icon, color, style }) => {
             return (
-              <motion.div
-                initial={{ opacity: 0, y: 70 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: (id / 10) * 3 }}
-                viewport={{ once: true, amount: 0.8 }}
-                key={id}
-                className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-              >
-                <Icon
-                  size={70}
-                  className={`w-20 mx-auto ${color} tech-icon`}
-                  aria-labelledby={`tech-exp-icon-${id}`}
-                />
-                <p id={`tech-exp-icon-${id}`} className={`mt-4`}>
-                  {title}
-                </p>
-              </motion.div>
+              <div className={`hover:scale-105 duration-500`} key={id}>
+                <motion.div
+                  initial={{ opacity: 0, y: 70 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: (id / 10) * 3 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className={`shadow-md py-2 rounded-lg ${style}`}
+                >
+                  <Icon
+                    size={70}
+                    className={`w-20 mx-auto ${color} tech-icon`}
+                    aria-labelledby={`tech-exp-icon-${id}`}
+                  />
+                  <p id={`tech-exp-icon-${id}`} className={`mt-4`}>
+                    {title}
+                  </p>
+                </motion.div>
+              </div>
             );
           })}
         </div>
