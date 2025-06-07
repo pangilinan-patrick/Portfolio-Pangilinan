@@ -32,11 +32,7 @@ function About() {
           viewport={{ once: true, amount: 0.8 }}
           className={`text-xl mt-10`}
         >
-          I have experience and expertise in Front-end Development, with a
-          strong inclination towards Graphic Design. My proficiency lies in
-          technologies like ReactJS, VueJS with Quasar Framework, and Axios.
-          Furthermore, I am well-versed in graphic design tools such as GIMP and
-          Inkscape.
+          With hands-on experience in Agile teams, I’ve contributed to full-cycle application development—from front-end builds with Vue.js and React to backend integrations and API development. I’m a Boomi Certified Integration Developer and Microsoft Certified in Azure Fundamentals, with a strong foundation in cloud computing, version control, and data analytics tools like PowerBI.
         </motion.p>
         {/* Third appear from left */}
         <motion.p
