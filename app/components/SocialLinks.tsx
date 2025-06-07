@@ -37,7 +37,7 @@ function SocialLinks() {
           Mail <FaEnvelope size={20} />
         </>
       ),
-      href: "mailto:patrick_pangilinan@dlsl.edu.ph",
+      href: "mailto:patrickpangilinancs@proton.me",
     },
     {
       id: 4,
