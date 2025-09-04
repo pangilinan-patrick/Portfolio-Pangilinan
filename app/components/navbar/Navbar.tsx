@@ -86,7 +86,7 @@ function Navbar() {
           <span className={`ml-2 text-gray-400 text-sm font-medium`}>Mail</span>
         </>
       ),
-      href: "mailto:patrick_pangilinan@dlsl.edu.ph",
+      href: "mailto:patrickpangilinancs@proton.me",
     },
     {
       id: 3,
