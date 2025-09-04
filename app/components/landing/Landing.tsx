@@ -37,11 +37,7 @@ function Landing() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="text-gray-400 py-4 sm:mr-28"
           >
-            Hi, I&apos;m Patrick Pangilinan! I&apos;m a diligent 4th Year
-            Computer Science Student with skills in programming, and
-            specialization in Front-end Development. Committed to continuous
-            learning and professional growth, I consistently seek out new
-            opportunities to expand my skills and knowledge.
+            Hi, I&apos;m Patrick Pangilinan! I&apos;m a Computer Science graduate from De La Salle University-Lipa, currently working as an Associate Software Engineer at Accenture. I specialize in developing and maintaining scalable, high-performance web applications using modern technologies like C#, ASP.NET MVC, JavaScript, SQL, and Azure services.
           </motion.p>
 
           {/* Third Section appear from bottom  */}
