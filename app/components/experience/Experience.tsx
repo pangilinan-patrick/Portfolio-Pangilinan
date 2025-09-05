@@ -2,15 +2,16 @@
 import React from "react";
 import { IconType } from "react-icons";
 import {
-  FaBootstrap,
   FaCss3,
   FaHtml5,
   FaJs,
   FaReact,
-  FaSass,
-  FaVuejs,
+  FaGitSquare,
+  FaLinux
 } from "react-icons/fa";
-import { SiNextdotjs, SiQuasar } from "react-icons/si";
+import { DiMsqlServer } from "react-icons/di";
+import { SiDotnet } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
 import { motion } from "framer-motion";
 
 interface Tech {
@@ -46,10 +47,11 @@ function Experience() {
     },
     {
       id: 4,
-      icon: FaVuejs,
-      title: "VueJS",
-      color: "text-green-500",
-      style: "shadow-green-500",
+      icon: SiDotnet,
+      title: ".NET",
+      // #6d439c
+      color: "text-purple-500",
+      style: "shadow-purple-500",
     },
     {
       id: 5,
@@ -60,31 +62,32 @@ function Experience() {
     },
     {
       id: 6,
-      icon: FaSass,
-      title: "SCSS",
-      color: "text-pink-500",
-      style: "shadow-pink-500",
+      icon: VscAzure,
+      title: "Azure",
+      // #36b8ec
+      color: "text-sky-500",
+      style: "shadow-sky-500",
     },
     {
       id: 7,
-      icon: FaBootstrap,
-      title: "Bootstrap",
-      color: "text-purple-500",
-      style: "shadow-purple-500",
+      icon: DiMsqlServer,
+      title: "MS SQL",
+      color: "text-orange-500",
+      style: "shadow-orange-500",
     },
     {
       id: 8,
-      icon: SiNextdotjs,
-      title: "NextJS",
-      color: "text-slate-500",
-      style: "shadow-slate-500",
+      icon: FaGitSquare,
+      title: "Git",
+      color: "text-orange-600",
+      style: "shadow-orange-500",
     },
     {
       id: 9,
-      icon: SiQuasar,
-      title: "Quasar",
-      color: "text-sky-500",
-      style: "shadow-sky-500",
+      icon: FaLinux,
+      title: "Linux",
+      color: "text-slate-300",
+      style: "shadow-slate-300",
     },
   ];
 
