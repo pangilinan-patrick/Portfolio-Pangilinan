@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/node": "24.3.1",
-    "@types/react": "18.2.7",
+    "@types/react": "19.1.12",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.21",
     "eslint": "8.41.0",
@@ -20,7 +20,7 @@
     "nextjs-fonts": "^0.22.0",
     "popmotion": "^11.0.5",
     "postcss": "8.4.31",
-    "react": "18.2.0",
+    "react": "19.1.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.12.0",
     "tailwindcss": "3.3.2",
