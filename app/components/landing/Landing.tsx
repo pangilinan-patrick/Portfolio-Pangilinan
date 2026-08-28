@@ -27,7 +27,7 @@ function Landing() {
             transition={{ duration: 0.8 }}
             className="text-4xl sm:text-7xl font-bold"
           >
-            I&apos;m a Front-End Developer
+            I&apos;m a Software Developer
           </motion.h2>
 
           {/* Second Section appear from left  */}
@@ -37,7 +37,7 @@ function Landing() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="text-gray-400 py-4 sm:mr-28"
           >
-            Hi, I&apos;m Patrick Pangilinan! I&apos;m a Software Engineering Analyst at Accenture. I specialize in developing and maintaining scalable, high-performance web applications using modern technologies like C#, ASP.NET, ReactJS, SQL, and Azure services.
+            Hi, I&apos;m Patrick Pangilinan! I&apos;m a Software Developer at IDEMIA. I specialize in developing and maintaining scalable, high-performance web applications using modern technologies like C#, ASP.NET, ReactJS, SQL, and Azure services.
           </motion.p>
 
           {/* Third Section appear from bottom  */}
