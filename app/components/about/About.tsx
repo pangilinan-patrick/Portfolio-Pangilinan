@@ -32,8 +32,8 @@ function About() {
           viewport={{ once: true, amount: 0.8 }}
           className={`text-xl mt-10`}
         >
-          With hands-on experience in Agile teams, I&apos;ve contributed to full-cycle application development—from front-end builds with Vue.js and React to backend integrations and API development with .NET and Azure Functions.
-          I&apos;m a Boomi Certified Integration Developer and Microsoft Certified in Azure Fundamentals, with a strong foundation in cloud computing and version control.
+          With hands-on experience in Agile teams, I&apos;ve contributed to full-cycle application development—from front-end builds with ASP.NET and React to backend integrations and API development.
+          I&apos;m a Microsoft Certified in Azure Fundamentals, with a strong foundation in cloud computing and version control.
         </motion.p>
         {/* Third appear from left */}
         <motion.p
