@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import myDbuddy from "public/mydbuddy/mydbuddy.jpg";
-import openChatbot from "public/mydbuddy/open-chatbot.gif";
-import ruleBased from "public/mydbuddy/rule-based.gif";
-import calculator from "public/calculator/calculator.jpg";
-import todoList from "public/todo-list/todolist.jpg";
-import scienceWeb from "public/physical-science/scienceweb.jpg";
-import userManagement from "public/user-management/usermanagement.jpg";
-import innospireWeb from "public/innospire/innospireweb.jpg";
+import myDbuddy from "@/public/mydbuddy/mydbuddy.jpg";
+import openChatbot from "@/public/mydbuddy/open-chatbot.gif";
+import ruleBased from "@/public/mydbuddy/rule-based.gif";
+import calculator from "@/public/calculator/calculator.jpg";
+import todoList from "@/public/todo-list/todolist.jpg";
+import scienceWeb from "@/public/physical-science/scienceweb.jpg";
+import userManagement from "@/public/user-management/usermanagement.jpg";
+import innospireWeb from "@/public/innospire/innospireweb.jpg";
 import Image, { StaticImageData } from "next/image";
 import {
   FaBootstrap,

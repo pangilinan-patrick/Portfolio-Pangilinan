@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import HeroImage from "app/assets/heroImage.jpg";
-import spaceship from "app/assets/spaceship.png";
+import HeroImage from "@/app/assets/heroImage.jpg";
+import spaceship from "@/app/assets/spaceship.png";
 import Image from "next/image";
 import { FaAngleRight } from "react-icons/fa";
 import ScrollLink from "../ScrollLink";

@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
-import "app/components/portfolio/carousel/styles.css";
+import "@/app/components/portfolio/carousel/styles.css";
 import Image, { StaticImageData } from "next/image";
 
 interface CarouselProps {
